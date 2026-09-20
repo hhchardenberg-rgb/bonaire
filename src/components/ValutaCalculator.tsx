@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocalStorage } from "@/lib/useLocalStorage";
 
 interface Koers {
@@ -14,12 +14,23 @@ function formatBedrag(n: number): string {
 }
 
 export function ValutaCalculator() {
-  const { waarde: koers, bijwerken: setKoers } = useLocalStorage<Koers | null>("bonaire-wisselkoers", null);
-  const [status, setStatus] = useState<"laden" | "klaar" | "fout">("laden");
+  const { waarde: koers, bijwerken: setKoers, geladen } = useLocalStorage<Koers | null>(
+    "bonaire-wisselkoers",
+    null
+  );
+  const [status, setStatus] = useState<"laden" | "vers" | "verouderd" | "fout">("laden");
   const [dollar, setDollar] = useState("100");
   const [euro, setEuro] = useState("");
 
+  // Ref zodat de fetch-poging altijd de meest recente cache ziet, ook als de
+  // effect-closure hieronder maar één keer wordt aangemaakt.
+  const koersRef = useRef(koers);
   useEffect(() => {
+    koersRef.current = koers;
+  }, [koers]);
+
+  useEffect(() => {
+    if (!geladen) return;
     let actief = true;
     fetch("https://api.frankfurter.app/latest?from=USD&to=EUR")
       .then((res) => {
@@ -29,17 +40,18 @@ export function ValutaCalculator() {
       .then((data: { date: string; rates: { EUR: number } }) => {
         if (!actief) return;
         setKoers({ waarde: data.rates.EUR, datum: data.date });
-        setStatus("klaar");
+        setStatus("vers");
       })
       .catch(() => {
         if (!actief) return;
-        setStatus(koers ? "klaar" : "fout");
+        // Kon de actuele koers niet ophalen: gebruik de laatst bekende koers uit de cache, indien aanwezig.
+        setStatus(koersRef.current ? "verouderd" : "fout");
       });
     return () => {
       actief = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [geladen]);
 
   useEffect(() => {
     if (koers && dollar !== "") {
@@ -69,7 +81,8 @@ export function ValutaCalculator() {
 
       {status === "fout" ? (
         <p className="mt-2 text-sm text-diepblauw-700/70">
-          Kon de actuele wisselkoers niet ophalen (bijv. geen internet). Probeer het later nog eens.
+          Kon geen wisselkoers ophalen of terugvinden (bijv. geen internet, en nog geen eerdere
+          koers bekend op dit apparaat). Probeer het later nog eens.
         </p>
       ) : (
         <>
@@ -104,10 +117,15 @@ export function ValutaCalculator() {
 
           <p className="mt-3 text-xs text-diepblauw-700/60">
             {status === "laden" && !koers && "Koers ophalen…"}
-            {koers &&
-              `1 USD = €${formatBedrag(koers.waarde)} — koers van ${new Date(
-                `${koers.datum}T12:00:00`
-              ).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" })}`}
+            {koers && (
+              <>
+                {`1 USD = €${formatBedrag(koers.waarde)} — koers van ${new Date(
+                  `${koers.datum}T12:00:00`
+                ).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" })}`}
+                {status === "verouderd" &&
+                  " (kon niet vernieuwen, dit is de laatst bekende koers)"}
+              </>
+            )}
           </p>
         </>
       )}

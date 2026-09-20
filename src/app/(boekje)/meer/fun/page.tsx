@@ -6,7 +6,7 @@ export const metadata = { title: "Voor de lol" };
 
 const items = [
   { href: "/meer/fun/kiezer", label: "Wie kiest vandaag?", emoji: "🎲" },
-  { href: "/meer/fun/haai", label: "Hongerige haai", emoji: "🦈" },
+  { href: "/meer/fun/haai", label: "Ella's haaienspel", emoji: "🦈" },
   { href: "/meer/fun/bingo", label: "Vakantie-bingo", emoji: "🎉" },
   { href: "/meer/fun/quiz", label: "Bonaire-quiz", emoji: "🧠" },
   { href: "/meer/fun/bucketlist", label: "Bucketlist", emoji: "📋" },

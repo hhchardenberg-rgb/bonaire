@@ -13,15 +13,22 @@ function berekenRest(doelIso: string) {
   return { dagen, uren, minuten, seconden, klaar: verschil === 0 };
 }
 
+const LABELS = ["dagen", "uur", "min", "sec"];
+
 export function Countdown({ doelIso, label }: { doelIso: string; label: string }) {
-  const [rest, setRest] = useState(() => berekenRest(doelIso));
+  // Start als `null`: de precieze telling hangt af van Date.now(), wat op de
+  // server (buildtijd) en de client (laadtijd) net anders uitvalt. Door pas
+  // na het mounten (client-only) te berekenen, blijft de eerste render op
+  // server en client identiek en ontstaat er geen hydration-mismatch.
+  const [rest, setRest] = useState<ReturnType<typeof berekenRest> | null>(null);
 
   useEffect(() => {
+    setRest(berekenRest(doelIso));
     const interval = setInterval(() => setRest(berekenRest(doelIso)), 1000);
     return () => clearInterval(interval);
   }, [doelIso]);
 
-  if (rest.klaar) {
+  if (rest?.klaar) {
     return (
       <p className="text-center text-lg font-semibold text-koraal-600">
         We zijn onderweg — of al aangekomen! 🌴
@@ -29,12 +36,14 @@ export function Countdown({ doelIso, label }: { doelIso: string; label: string }
     );
   }
 
-  const blokken = [
-    { waarde: rest.dagen, label: "dagen" },
-    { waarde: rest.uren, label: "uur" },
-    { waarde: rest.minuten, label: "min" },
-    { waarde: rest.seconden, label: "sec" },
-  ];
+  const blokken = rest
+    ? [
+        { waarde: rest.dagen, label: "dagen" },
+        { waarde: rest.uren, label: "uur" },
+        { waarde: rest.minuten, label: "min" },
+        { waarde: rest.seconden, label: "sec" },
+      ]
+    : LABELS.map((l) => ({ waarde: "–" as const, label: l }));
 
   return (
     <div>

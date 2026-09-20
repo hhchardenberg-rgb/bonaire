@@ -16,7 +16,7 @@ const secties = [
     titel: "Voor de lol",
     items: [
       { href: "/meer/fun/kiezer", label: "Wie kiest vandaag?", emoji: "🎲", omschrijving: "Laat het lot beslissen" },
-      { href: "/meer/fun/haai", label: "Hongerige haai", emoji: "🦈", omschrijving: "Pacman-stijl: eet vissen en kwallen, ontwijk de octopus" },
+      { href: "/meer/fun/haai", label: "Ella's haaienspel", emoji: "🦈", omschrijving: "Pacman-stijl: eet vissen en kwallen, ontwijk de octopus" },
       { href: "/meer/fun/bingo", label: "Vakantie-bingo", emoji: "🎉", omschrijving: "Vink af wat je tegenkomt" },
       { href: "/meer/fun/quiz", label: "Bonaire-quiz", emoji: "🧠", omschrijving: "Test je eilandkennis" },
       { href: "/meer/fun/bucketlist", label: "Bucketlist", emoji: "📋", omschrijving: "Dingen die we samen willen doen" },

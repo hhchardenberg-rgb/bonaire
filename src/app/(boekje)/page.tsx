@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HeroIllustration } from "@/components/HeroIllustration";
 import { Countdown } from "@/components/Countdown";
 import { WeerEnTip } from "@/components/WeerEnTip";
+import { DansendeBeestjes } from "@/components/DansendeBeestjes";
 import { trip } from "@/data/trip";
 import { formatDatumLang } from "@/lib/date";
 
@@ -16,7 +17,10 @@ const snelknoppen = [
 export default function WelkomstPagina() {
   return (
     <div className="space-y-6">
-      <HeroIllustration />
+      <div className="relative">
+        <HeroIllustration />
+        <DansendeBeestjes />
+      </div>
 
       <div className="text-center">
         <h1 className="font-display text-3xl font-bold text-diepblauw-800">{trip.titel}</h1>
