@@ -142,14 +142,3 @@ src/
 - [PRIVACY-SECURITY.md](./PRIVACY-SECURITY.md) — privacy- en
   beveiligingschecklist
 - [TESTPLAN.md](./TESTPLAN.md) — testlijst voor mobiel, tablet en desktop
-
-## 8. Nog in te vullen
-
-De meeste praktische gegevens staan er al in (vluchten, accommodatie,
-noodnummers). Wat nog open staat:
-
-- Reserveringsnummers voor huurauto en activiteiten (`src/data/praktisch.ts`,
-  `src/data/programma.ts`)
-- Openingstijden en prijzen van gidsonderdelen die nog geen waarde hebben
-  (`src/data/gids.ts`) — vul dit pas aan als je het zeker weet
-- Polisnummer reisverzekering
