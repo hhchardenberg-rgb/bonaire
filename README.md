@@ -155,4 +155,3 @@ noodnummers). Wat nog open staat:
 - Openingstijden en prijzen van gidsonderdelen die nog geen waarde hebben
   (`src/data/gids.ts`) — vul dit pas aan als je het zeker weet
 - Polisnummer reisverzekering
-- Eventueel een link naar een gedeeld fotoalbum in `src/data/trip.ts`

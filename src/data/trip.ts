@@ -20,7 +20,7 @@ export const trip = {
     kaartUrl: mapsUrl("4P95+X94 Kralendijk Bonaire"),
   },
   // Vul hier een link naar een gedeeld album (bv. Google Foto's of iCloud) in voor de fotomuur.
-  fotoAlbumUrl: "",
+  fotoAlbumUrl: "https://photos.icloud.com/shared/album/0ffaWqP1RdLFknAyiE03Aj1Iw",
 } as const;
 
 export type Trip = typeof trip;
