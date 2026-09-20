@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BottomNav } from "@/components/BottomNav";
 import { LogoEasterEgg } from "@/components/LogoEasterEgg";
+import { InstallHint } from "@/components/InstallHint";
 import { trip } from "@/data/trip";
 
 export default function BoekjeLayout({ children }: { children: React.ReactNode }) {
@@ -18,6 +19,7 @@ export default function BoekjeLayout({ children }: { children: React.ReactNode }
 
       <main className="mx-auto max-w-xl px-4 pb-28 pt-4">{children}</main>
 
+      <InstallHint />
       <BottomNav />
     </div>
   );

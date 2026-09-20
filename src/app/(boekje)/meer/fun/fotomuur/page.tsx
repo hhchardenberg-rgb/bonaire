@@ -56,8 +56,7 @@ export default function FotomuurPagina() {
           </a>
         ) : (
           <p className="mt-1 text-sm text-diepblauw-700/70">
-            Nog geen album gekoppeld — vul een link naar bijvoorbeeld Google Foto&apos;s in bij{" "}
-            <code className="rounded bg-zand-100 px-1">src/data/trip.ts</code>.
+            Nog geen gedeeld album gekoppeld.
           </p>
         )}
       </div>
