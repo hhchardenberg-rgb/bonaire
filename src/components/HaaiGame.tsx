@@ -70,7 +70,7 @@ export function HaaiGame() {
 
   const roosterRef = useRef<Rooster>(maakRooster());
   const spelerRef = useRef<Positie>(vindSymbool("P"));
-  const octopusRef = useRef<Positie>(vindSymbool("E"));
+  const octopussenRef = useRef<Positie[]>([vindSymbool("E"), vindSymbool("F")]);
   const huidigeRichtingRef = useRef<Richting>({ dx: 0, dy: 0 });
   const gewenstRichtingRef = useRef<Richting>({ dx: 0, dy: 0 });
   const tikTellerRef = useRef(0);
@@ -81,9 +81,11 @@ export function HaaiGame() {
   const reset = useCallback(() => {
     roosterRef.current = maakRooster();
     spelerRef.current = vindSymbool("P");
-    octopusRef.current = vindSymbool("E");
+    octopussenRef.current = [vindSymbool("E"), vindSymbool("F")];
     roosterRef.current[spelerRef.current.y][spelerRef.current.x] = " ";
-    roosterRef.current[octopusRef.current.y][octopusRef.current.x] = " ";
+    for (const octo of octopussenRef.current) {
+      roosterRef.current[octo.y][octo.x] = " ";
+    }
     huidigeRichtingRef.current = { dx: 0, dy: 0 };
     gewenstRichtingRef.current = { dx: 0, dy: 0 };
     teEten.current = telEetbaar(roosterRef.current);
@@ -131,8 +133,9 @@ export function HaaiGame() {
     ctx.fillText("🦈", 0, 1);
     ctx.restore();
 
-    const octo = octopusRef.current;
-    ctx.fillText("🐙", octo.x * CEL + CEL / 2, octo.y * CEL + CEL / 2 + 1);
+    for (const octo of octopussenRef.current) {
+      ctx.fillText("🐙", octo.x * CEL + CEL / 2, octo.y * CEL + CEL / 2 + 1);
+    }
   }, []);
 
   useEffect(() => {
@@ -168,14 +171,19 @@ export function HaaiGame() {
         }
       }
 
-      // De octopus beweegt op halve snelheid richting de haai.
+      // De octopussen bewegen op halve snelheid richting de haai.
       tikTellerRef.current += 1;
       if (tikTellerRef.current % 2 === 0) {
-        const stap = kortstePad(rooster, octopusRef.current, spelerRef.current);
-        if (stap) octopusRef.current = stap;
+        octopussenRef.current = octopussenRef.current.map((octo) => {
+          const stap = kortstePad(rooster, octo, spelerRef.current);
+          return stap ?? octo;
+        });
       }
 
-      if (octopusRef.current.x === spelerRef.current.x && octopusRef.current.y === spelerRef.current.y) {
+      const geraakt = octopussenRef.current.some(
+        (octo) => octo.x === spelerRef.current.x && octo.y === spelerRef.current.y
+      );
+      if (geraakt) {
         setStatus("game-over");
       } else if (teEten.current <= 0) {
         setStatus("gewonnen");
@@ -280,7 +288,7 @@ export function HaaiGame() {
         {status !== "spelen" && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-diepblauw-900/80 p-4 text-center text-white">
             {status === "idle" && (
-              <p className="font-display text-lg font-semibold">Eet alle vissen en kwallen op — pas op voor de octopus!</p>
+              <p className="font-display text-lg font-semibold">Eet alle vissen en kwallen op — pas op voor de octopussen!</p>
             )}
             {status === "gewonnen" && (
               <p className="font-display text-lg font-semibold">🎉 Gewonnen! Score: {score}</p>
