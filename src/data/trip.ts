@@ -15,7 +15,7 @@ export const trip = {
     adres: "4P95+X94, Kralendijk, Caribisch Nederland",
     checkIn: "vanaf 15:00",
     checkOut: "voor 11:00",
-    wifi: "Netwerk en wachtwoord: vraag dit bij aankomst aan Dennis",
+    wifi: "Wachtwoord: beachhousebonaire",
     contact: "Verhuurder: Dennis — +599 782 9691",
     kaartUrl: mapsUrl("4P95+X94 Kralendijk Bonaire"),
   },

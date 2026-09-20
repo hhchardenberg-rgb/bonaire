@@ -40,7 +40,7 @@ export const praktischeInfo: PraktischSectie[] = [
       { label: "Adres", tekst: "Kas den Daas — 4P95+X94, Kralendijk, Caribisch Nederland" },
       { label: "Check-in", tekst: "Vanaf 15:00" },
       { label: "Check-out", tekst: "Voor 11:00" },
-      { label: "Wifi", tekst: "Netwerk en wachtwoord: vraag dit bij aankomst aan Dennis" },
+      { label: "Wifi", tekst: "Wachtwoord: beachhousebonaire" },
       { label: "Verhuurder", tekst: "Dennis — +599 782 9691" },
     ],
   },

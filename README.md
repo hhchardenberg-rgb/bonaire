@@ -148,8 +148,6 @@ src/
 De meeste praktische gegevens staan er al in (vluchten, accommodatie,
 noodnummers). Wat nog open staat:
 
-- Wifi-wachtwoord van de accommodatie (`src/data/trip.ts` en
-  `src/data/praktisch.ts`)
 - Reserveringsnummers voor huurauto en activiteiten (`src/data/praktisch.ts`,
   `src/data/programma.ts`)
 - Openingstijden en prijzen van gidsonderdelen die nog geen waarde hebben
