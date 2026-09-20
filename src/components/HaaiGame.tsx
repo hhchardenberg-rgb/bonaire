@@ -216,9 +216,51 @@ export function HaaiGame() {
     return () => window.removeEventListener("keydown", opToets);
   }, []);
 
-  function stuur(richting: Richting) {
-    gewenstRichtingRef.current = richting;
-  }
+  // Swipe-besturing: vinger op het speelveld leggen en in een richting bewegen.
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const MIN_SWIPE = 18;
+    let startX = 0;
+    let startY = 0;
+    let gesleept = false;
+
+    function opStart(e: TouchEvent) {
+      const t = e.touches[0];
+      startX = t.clientX;
+      startY = t.clientY;
+      gesleept = false;
+    }
+
+    function opMove(e: TouchEvent) {
+      // Voorkomt dat de pagina meescrollt terwijl je op het speelveld veegt.
+      e.preventDefault();
+      const t = e.touches[0];
+      const dx = t.clientX - startX;
+      const dy = t.clientY - startY;
+      if (!gesleept && Math.hypot(dx, dy) > MIN_SWIPE) {
+        gesleept = true;
+        gewenstRichtingRef.current =
+          Math.abs(dx) > Math.abs(dy)
+            ? dx > 0
+              ? RICHTINGEN.rechts
+              : RICHTINGEN.links
+            : dy > 0
+              ? RICHTINGEN.onder
+              : RICHTINGEN.boven;
+        startX = t.clientX;
+        startY = t.clientY;
+      }
+    }
+
+    canvas.addEventListener("touchstart", opStart, { passive: true });
+    canvas.addEventListener("touchmove", opMove, { passive: false });
+    return () => {
+      canvas.removeEventListener("touchstart", opStart);
+      canvas.removeEventListener("touchmove", opMove);
+    };
+  }, []);
 
   return (
     <div className="space-y-4">
@@ -232,8 +274,8 @@ export function HaaiGame() {
           ref={canvasRef}
           width={HAAI_COLS * CEL}
           height={HAAI_ROWS * CEL}
-          className="block w-full"
-          style={{ aspectRatio: `${HAAI_COLS} / ${HAAI_ROWS}` }}
+          className="block w-full select-none"
+          style={{ aspectRatio: `${HAAI_COLS} / ${HAAI_ROWS}`, touchAction: "none" }}
         />
         {status !== "spelen" && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-diepblauw-900/80 p-4 text-center text-white">
@@ -257,42 +299,9 @@ export function HaaiGame() {
         )}
       </div>
 
-      <div className="mx-auto grid w-40 grid-cols-3 gap-1.5">
-        <div />
-        <button
-          type="button"
-          onClick={() => stuur(RICHTINGEN.boven)}
-          aria-label="Omhoog"
-          className="focus-ring flex h-11 items-center justify-center rounded-xl bg-white text-lg shadow-card active:scale-95"
-        >
-          ⬆️
-        </button>
-        <div />
-        <button
-          type="button"
-          onClick={() => stuur(RICHTINGEN.links)}
-          aria-label="Naar links"
-          className="focus-ring flex h-11 items-center justify-center rounded-xl bg-white text-lg shadow-card active:scale-95"
-        >
-          ⬅️
-        </button>
-        <button
-          type="button"
-          onClick={() => stuur(RICHTINGEN.onder)}
-          aria-label="Omlaag"
-          className="focus-ring flex h-11 items-center justify-center rounded-xl bg-white text-lg shadow-card active:scale-95"
-        >
-          ⬇️
-        </button>
-        <button
-          type="button"
-          onClick={() => stuur(RICHTINGEN.rechts)}
-          aria-label="Naar rechts"
-          className="focus-ring flex h-11 items-center justify-center rounded-xl bg-white text-lg shadow-card active:scale-95"
-        >
-          ➡️
-        </button>
-      </div>
+      <p className="text-center text-xs text-diepblauw-700/50">
+        Veeg op het speelveld om de haai te sturen (of gebruik de pijltjestoetsen).
+      </p>
     </div>
   );
 }
