@@ -4,10 +4,10 @@ import { mapsUrl } from "@/lib/maps";
 export const locaties: Locatie[] = [
   {
     id: "accommodatie",
-    naam: "Vakantiehuis Kaya Kunuku",
+    naam: "Kas den Daas",
     type: "accommodatie",
     omschrijving: "Onze basis voor de hele week.",
-    kaartUrl: mapsUrl("Kaya Kunuku 12 Kralendijk Bonaire"),
+    kaartUrl: mapsUrl("4P95+X94 Kralendijk Bonaire"),
   },
   {
     id: "luchthaven",

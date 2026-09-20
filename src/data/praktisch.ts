@@ -37,7 +37,7 @@ export const praktischeInfo: PraktischSectie[] = [
     titel: "Accommodatie",
     emoji: "🏠",
     inhoud: [
-      { label: "Adres", tekst: "Kaya Kunuku 12, Kralendijk, Bonaire" },
+      { label: "Adres", tekst: "Kas den Daas — 4P95+X94, Kralendijk, Caribisch Nederland" },
       { label: "Check-in", tekst: "Vanaf 15:00" },
       { label: "Check-out", tekst: "Voor 11:00" },
       { label: "Wifi", tekst: "Netwerk en wachtwoord: nog controleren" },
