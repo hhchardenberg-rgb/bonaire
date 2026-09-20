@@ -17,6 +17,7 @@ const secties = [
     items: [
       { href: "/meer/fun/kiezer", label: "Wie kiest vandaag?", emoji: "🎲", omschrijving: "Laat het lot beslissen" },
       { href: "/meer/fun/haai", label: "Ella's haaienspel", emoji: "🦈", omschrijving: "Pacman-stijl: eet vissen en kwallen, ontwijk de octopus" },
+      { href: "/meer/fun/snake", label: "Charella's Snake Game", emoji: "🐍", omschrijving: "Sprookjesstijl slangenspel: verzamel schatten" },
       { href: "/meer/fun/bingo", label: "Vakantie-bingo", emoji: "🎉", omschrijving: "Vink af wat je tegenkomt" },
       { href: "/meer/fun/quiz", label: "Bonaire-quiz", emoji: "🧠", omschrijving: "Test je eilandkennis" },
       { href: "/meer/fun/bucketlist", label: "Bucketlist", emoji: "📋", omschrijving: "Dingen die we samen willen doen" },
