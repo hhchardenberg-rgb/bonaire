@@ -149,7 +149,7 @@ export const programma: Dagprogramma[] = [
   },
   {
     dag: "2026-09-25",
-    titel: "Natuur en rust",
+    titel: "Natuur en foodtruck festival",
     activiteiten: [
       {
         id: "washington-slagbaai",
@@ -163,6 +163,19 @@ export const programma: Dagprogramma[] = [
         kaartUrl: mapsUrl("Washington Slagbaai National Park Bonaire"),
         fotoEmoji: "🌵",
         status: "gepland",
+      },
+      {
+        id: "jella-foodtruck-festival",
+        titel: "Jella & Co Foodtruck Festival",
+        datum: "2026-09-25",
+        tijd: "16:00",
+        eindtijd: "19:00",
+        locatie: "Bonaire (diverse locaties)",
+        omschrijving:
+          "Bonaire Culinary Tour 2026 van Duif & Co: een tour langs een selectie karakteristieke foodtrucks op het eiland, met bij elke stop een nieuwe smaakbeleving. Afsluiting met een likeurproeverij.",
+        praktisch: "Dress code: Naked Chique.",
+        fotoEmoji: "🌮",
+        status: "bevestigd",
       },
     ],
   },
