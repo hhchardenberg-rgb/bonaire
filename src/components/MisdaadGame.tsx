@@ -180,7 +180,7 @@ export function MisdaadGame() {
             )}
             {status === "afgelopen" && (
               <p className="font-display text-lg font-semibold">
-                🚔 Zaak gesloten na {ronde - 1} gevangen boef{ronde - 1 === 1 ? "" : "en"}. Score: {score}
+                🚔 Zaak gesloten na {ronde - 1} gevangen {ronde - 1 === 1 ? "boef" : "boeven"}. Score: {score}
               </p>
             )}
             <button
