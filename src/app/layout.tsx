@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fredoka, Inter } from "next/font/google";
 import { trip } from "@/data/trip";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
+import { ChunkErrorGuard } from "@/components/ChunkErrorGuard";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans antialiased">
         {children}
         <ServiceWorkerRegister />
+        <ChunkErrorGuard />
       </body>
     </html>
   );

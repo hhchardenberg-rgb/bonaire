@@ -1,6 +1,6 @@
 // Simpele service worker voor optionele PWA-installatie en offline toegang tot
 // eerder bezochte pagina's. Geen tracking, geen externe requests.
-const CACHE_NAAM = "bonaire-boekje-v1";
+const CACHE_NAAM = "bonaire-boekje-v2";
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
