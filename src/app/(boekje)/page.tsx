@@ -30,7 +30,7 @@ export default function WelkomstPagina() {
       </div>
 
       <div className="rounded-xl2 bg-white p-4 shadow-card">
-        <Countdown doelIso={trip.startDatum} label="Nog tot vertrek" />
+        <Countdown doelIso={trip.vertrekMoment} label="Nog tot vertrek" />
       </div>
 
       <p className="rounded-xl2 bg-turquoise-50 p-4 text-sm leading-relaxed text-diepblauw-800">

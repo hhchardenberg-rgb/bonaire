@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 function berekenRest(doelIso: string) {
-  const doel = new Date(`${doelIso}T00:00:00`).getTime();
+  const doel = new Date(doelIso.includes("T") ? doelIso : `${doelIso}T00:00:00`).getTime();
   const nu = Date.now();
   const verschil = Math.max(0, doel - nu);
   const dagen = Math.floor(verschil / (1000 * 60 * 60 * 24));
