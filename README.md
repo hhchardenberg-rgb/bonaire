@@ -1,4 +1,4 @@
-# Bonaire 2027 — Vakantieboekje
+# Bonaire 2026 — Vakantieboekje
 
 Een privé, mobile-first vakantieboekje voor de vriendengroep die naar Bonaire
 gaat. Gebouwd met Next.js (App Router), TypeScript en Tailwind CSS. Geen

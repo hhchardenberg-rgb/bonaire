@@ -3,17 +3,28 @@ import { mapsUrl } from "@/lib/maps";
 
 export const programma: Dagprogramma[] = [
   {
-    dag: "2027-03-13",
+    dag: "2026-09-22",
     titel: "Aankomstdag",
     activiteiten: [
       {
+        id: "vertrek-schiphol",
+        titel: "Vertrek vanaf Schiphol",
+        datum: "2026-09-22",
+        tijd: "08:15",
+        locatie: "Schiphol, vertrekhal 3",
+        omschrijving: "Rechtstreekse vlucht naar Bonaire, vluchtnummer OR393.",
+        praktisch: "Check-in balies 22–23, vertrekhal 3. Ruim op tijd aanwezig zijn (minimaal 3 uur voor vertrek).",
+        kaartUrl: mapsUrl("Schiphol Airport vertrekhal 3"),
+        fotoEmoji: "🛫",
+        status: "bevestigd",
+      },
+      {
         id: "vlucht-heen",
         titel: "Aankomst op Flamingo Airport",
-        datum: "2027-03-13",
-        tijd: "14:35",
+        datum: "2026-09-22",
         locatie: "Flamingo International Airport (BON)",
-        omschrijving: "Directe vlucht vanaf Amsterdam. Verzamelen bij de bagageband.",
-        praktisch: "Vluchtnummer: nog controleren. Check-in bagage: nog controleren.",
+        omschrijving: "Directe vlucht vanuit Amsterdam (OR393). Verzamelen bij de bagageband.",
+        praktisch: "Aankomsttijd: nog controleren. Check-in bagage: nog controleren.",
         kaartUrl: mapsUrl("Flamingo International Airport Bonaire"),
         fotoEmoji: "✈️",
         status: "bevestigd",
@@ -21,8 +32,8 @@ export const programma: Dagprogramma[] = [
       {
         id: "huurauto-ophalen",
         titel: "Huurauto's ophalen",
-        datum: "2027-03-13",
-        tijd: "15:15",
+        datum: "2026-09-22",
+        tijd: "na aankomst",
         locatie: "Verhuurbalie bij de luchthaven",
         omschrijving: "Twee auto's voor de hele groep. Rijbewijzen en creditcard meenemen.",
         praktisch: "Reserveringsnummer: nog controleren.",
@@ -34,7 +45,7 @@ export const programma: Dagprogramma[] = [
       {
         id: "inchecken-huis",
         titel: "Inchecken bij het vakantiehuis",
-        datum: "2027-03-13",
+        datum: "2026-09-22",
         tijd: "16:00",
         locatie: "Kaya Kunuku 12, Kralendijk",
         omschrijving: "Sleutels ophalen en de kamers verdelen.",
@@ -45,7 +56,7 @@ export const programma: Dagprogramma[] = [
       {
         id: "welkomstdiner",
         titel: "Welkomstdiner",
-        datum: "2027-03-13",
+        datum: "2026-09-22",
         tijd: "19:00",
         locatie: "It Rains Fishes",
         omschrijving: "Rustig samen inchecken op de vakantie met uitzicht op zee.",
@@ -57,13 +68,13 @@ export const programma: Dagprogramma[] = [
     ],
   },
   {
-    dag: "2027-03-14",
+    dag: "2026-09-23",
     titel: "Rustig inleven",
     activiteiten: [
       {
         id: "boodschappen-dag1",
         titel: "Grote boodschappen",
-        datum: "2027-03-14",
+        datum: "2026-09-23",
         tijd: "10:00",
         locatie: "Van den Tweel Supermarkt",
         omschrijving: "Ontbijt, water, zonnebrand en de basis voor de eerste dagen inslaan.",
@@ -74,7 +85,7 @@ export const programma: Dagprogramma[] = [
       {
         id: "strand-te-amu",
         titel: "Middag op het strand",
-        datum: "2027-03-14",
+        datum: "2026-09-23",
         tijd: "13:00",
         locatie: "Te Amo Beach",
         omschrijving: "Eerste keer het water in, rustig acclimatiseren.",
@@ -85,7 +96,7 @@ export const programma: Dagprogramma[] = [
       {
         id: "zonsondergang-dag1",
         titel: "Zonsondergang kijken",
-        datum: "2027-03-14",
+        datum: "2026-09-23",
         tijd: "18:15",
         locatie: "Sunset Beach",
         omschrijving: "Eerste zonsondergang van de trip, drankje mee.",
@@ -96,13 +107,13 @@ export const programma: Dagprogramma[] = [
     ],
   },
   {
-    dag: "2027-03-15",
+    dag: "2026-09-24",
     titel: "Snorkeldag",
     activiteiten: [
       {
         id: "snorkelen-1000-steps",
         titel: "Snorkelen bij 1000 Steps",
-        datum: "2027-03-15",
+        datum: "2026-09-24",
         tijd: "09:30",
         locatie: "1000 Steps",
         omschrijving: "Een van de bekendste duik- en snorkelspots van het eiland.",
@@ -114,7 +125,7 @@ export const programma: Dagprogramma[] = [
       {
         id: "lunch-kralendijk",
         titel: "Lunch in Kralendijk",
-        datum: "2027-03-15",
+        datum: "2026-09-24",
         tijd: "13:00",
         locatie: "Kralendijk centrum",
         omschrijving: "Vrij eten, iedereen kiest zelf een plek.",
@@ -125,13 +136,13 @@ export const programma: Dagprogramma[] = [
     ],
   },
   {
-    dag: "2027-03-16",
+    dag: "2026-09-25",
     titel: "Natuur en rust",
     activiteiten: [
       {
         id: "washington-slagbaai",
         titel: "Washington Slagbaai National Park",
-        datum: "2027-03-16",
+        datum: "2026-09-25",
         tijd: "08:30",
         eindtijd: "15:00",
         locatie: "Washington Slagbaai National Park",
@@ -144,13 +155,13 @@ export const programma: Dagprogramma[] = [
     ],
   },
   {
-    dag: "2027-03-17",
+    dag: "2026-09-26",
     titel: "Vrije dag",
     activiteiten: [
       {
         id: "vrije-dag",
         titel: "Vrije dag / eigen invulling",
-        datum: "2027-03-17",
+        datum: "2026-09-26",
         tijd: "hele dag",
         omschrijving: "Geen vast programma. Gebruik de gids voor inspiratie.",
         fotoEmoji: "🌴",
@@ -159,7 +170,7 @@ export const programma: Dagprogramma[] = [
       {
         id: "cocktailavond",
         titel: "Cocktailavond thuis",
-        datum: "2027-03-17",
+        datum: "2026-09-26",
         tijd: "20:00",
         locatie: "Vakantiehuis",
         omschrijving: "Zelf cocktails maken en de scores bijhouden op het scorebord.",
@@ -169,13 +180,13 @@ export const programma: Dagprogramma[] = [
     ],
   },
   {
-    dag: "2027-03-18",
+    dag: "2026-09-27",
     titel: "Duikdag",
     activiteiten: [
       {
         id: "duik-klein-bonaire",
         titel: "Duiktrip Klein Bonaire",
-        datum: "2027-03-18",
+        datum: "2026-09-27",
         tijd: "09:00",
         locatie: "Klein Bonaire (per boot)",
         omschrijving: "Boottrip met duikschool naar Klein Bonaire.",
@@ -188,13 +199,13 @@ export const programma: Dagprogramma[] = [
     ],
   },
   {
-    dag: "2027-03-19",
+    dag: "2026-09-28",
     titel: "Cultuur en stad",
     activiteiten: [
       {
         id: "zoutpannen",
         titel: "Zoutpannen en Rode Slagbaai",
-        datum: "2027-03-19",
+        datum: "2026-09-28",
         tijd: "10:00",
         locatie: "Zoutpannen, Zuid-Bonaire",
         omschrijving: "De roze zoutpannen en flamingo's bekijken.",
@@ -205,7 +216,7 @@ export const programma: Dagprogramma[] = [
       {
         id: "afscheidsdiner",
         titel: "Afscheidsdiner",
-        datum: "2027-03-19",
+        datum: "2026-09-28",
         tijd: "19:30",
         locatie: "Zeezicht Restaurant",
         omschrijving: "Laatste gezamenlijke diner van de trip.",
@@ -217,13 +228,13 @@ export const programma: Dagprogramma[] = [
     ],
   },
   {
-    dag: "2027-03-20",
+    dag: "2026-09-29",
     titel: "Laatste dag",
     activiteiten: [
       {
         id: "laatste-strand",
         titel: "Laatste strandmoment",
-        datum: "2027-03-20",
+        datum: "2026-09-29",
         tijd: "10:00",
         locatie: "Sorobon Beach",
         omschrijving: "Rustig genieten en afsluiten voor het inpakken begint.",
@@ -234,7 +245,7 @@ export const programma: Dagprogramma[] = [
       {
         id: "inpakken",
         titel: "Koffers pakken en huis opruimen",
-        datum: "2027-03-20",
+        datum: "2026-09-29",
         tijd: "16:00",
         locatie: "Vakantiehuis",
         omschrijving: "Check de paklijst en check-outtijden.",
@@ -244,13 +255,13 @@ export const programma: Dagprogramma[] = [
     ],
   },
   {
-    dag: "2027-03-21",
+    dag: "2026-09-30",
     titel: "Vertrekdag",
     activiteiten: [
       {
         id: "uitchecken",
         titel: "Uitchecken bij het vakantiehuis",
-        datum: "2027-03-21",
+        datum: "2026-09-30",
         tijd: "10:00",
         locatie: "Kaya Kunuku 12, Kralendijk",
         kaartUrl: mapsUrl("Kaya Kunuku 12 Kralendijk Bonaire"),
@@ -260,13 +271,14 @@ export const programma: Dagprogramma[] = [
       {
         id: "vlucht-terug",
         titel: "Terugvlucht naar Amsterdam",
-        datum: "2027-03-21",
-        tijd: "13:50",
+        datum: "2026-09-30",
+        tijd: "nog controleren",
         locatie: "Flamingo International Airport (BON)",
-        praktisch: "Vluchtnummer: nog controleren. Ruim op tijd inchecken.",
+        omschrijving: "Datum is een voorlopige inschatting (zelfde reisduur als het programma). Nog te bevestigen.",
+        praktisch: "Vluchtnummer en vertrektijd: nog controleren. Ruim op tijd inchecken.",
         kaartUrl: mapsUrl("Flamingo International Airport Bonaire"),
         fotoEmoji: "🛬",
-        status: "bevestigd",
+        status: "gepland",
       },
     ],
   },

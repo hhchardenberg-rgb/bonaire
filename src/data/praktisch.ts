@@ -11,8 +11,10 @@ export const praktischeInfo: PraktischSectie[] = [
     titel: "Vlucht",
     emoji: "✈️",
     inhoud: [
-      { label: "Heenvlucht", tekst: "13 maart 2027 — vluchtnummer: nog controleren" },
-      { label: "Terugvlucht", tekst: "21 maart 2027 — vluchtnummer: nog controleren" },
+      { label: "Heenvlucht", tekst: "22 september 2026, 08:15 uur — vluchtnummer OR393" },
+      { label: "Vertrekhal", tekst: "Vertrekhal 3" },
+      { label: "Check-in balies", tekst: "Balie 22–23" },
+      { label: "Terugvlucht", tekst: "30 september 2026 (nog controleren) — vluchtnummer: nog controleren" },
       { label: "Bagage", tekst: "Ruimbagage en handbagage: nog controleren per boeking" },
     ],
   },
