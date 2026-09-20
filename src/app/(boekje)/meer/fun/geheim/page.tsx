@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { BackLink } from "@/components/BackLink";
 import { PageHeader } from "@/components/PageHeader";
-import { easterEggs } from "@/data/fun";
+import { verborgenVerrassingen } from "@/data/fun";
 
 export default function GeheimPagina() {
   const [index, setIndex] = useState(0);
@@ -11,7 +11,7 @@ export default function GeheimPagina() {
   return (
     <div className="space-y-6">
       <BackLink />
-      <PageHeader titel="Geheim paasei gevonden!" ondertitel="Niks hiervan heeft iets met Bonaire te maken" emoji="🥚" />
+      <PageHeader titel="Verborgen verrassing gevonden!" ondertitel="Niks hiervan heeft iets met Bonaire te maken" emoji="🥚" />
 
       <div className="animate-pop-in rounded-xl2 bg-gradient-to-br from-zon-200 via-koraal-200 to-turquoise-200 p-6 text-center shadow-floating">
         <p className="text-4xl" aria-hidden>
@@ -23,10 +23,10 @@ export default function GeheimPagina() {
       </div>
 
       <div className="rounded-xl2 bg-white p-5 shadow-card">
-        <p className="text-sm leading-relaxed text-diepblauw-800">{easterEggs[index]}</p>
+        <p className="text-sm leading-relaxed text-diepblauw-800">{verborgenVerrassingen[index]}</p>
         <button
           type="button"
-          onClick={() => setIndex((i) => (i + 1) % easterEggs.length)}
+          onClick={() => setIndex((i) => (i + 1) % verborgenVerrassingen.length)}
           className="focus-ring mt-4 rounded-full bg-diepblauw-700 px-4 py-2 text-sm font-semibold text-white hover:bg-diepblauw-800"
         >
           Nog eentje

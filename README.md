@@ -56,7 +56,7 @@ je hoeft niets in de UI-code aan te passen:
 | `src/data/paklijst.ts` | Categorieën en items van de paklijst |
 | `src/data/taken.ts` | Groepsleden (gebruikt door "Wie kiest vandaag?") |
 | `src/data/nood.ts` | Noodnummers, contacten en verlies-instructies |
-| `src/data/fun.ts` | Quizvragen, bingo-items, quotes, bucketlist-voorbeelden, easter eggs |
+| `src/data/fun.ts` | Quizvragen, bingo-items, quotes, bucketlist-voorbeelden, verborgen verrassingen |
 | `src/data/dagtips.ts` | Dagtips en het (statische) weerbeeld |
 
 Prijzen, openingstijden en andere onzekere gegevens worden nooit verzonnen:

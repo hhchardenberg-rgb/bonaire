@@ -67,8 +67,8 @@ export const bingoItems: string[] = [
   "Iemand roept 'Victory Royale!' na het winnen van een spelletje",
 ];
 
-// Verborgen paaseieren — alleen te vinden door stiekem op het logo te tikken.
-export const easterEggs: string[] = [
+// Verborgen verrassingen — alleen te vinden door stiekem op het logo te tikken.
+export const verborgenVerrassingen: string[] = [
   "🎮 Fortnite-tip: de Storm sluit hier nooit, maar de supermarkt wel — om 19:00.",
   "⚡ Pokémon GO-trainers: weinig PokéStops op dit eiland, wel oneindig veel real-life zonsondergang-XP.",
   "🏰 Disney-regel: wie 'Hakuna Matata' zingt tijdens het afwassen, hoeft daarna niet af te drogen.",
@@ -76,7 +76,7 @@ export const easterEggs: string[] = [
   "🐭 Mickey-oortjes vergeten? Twee handdoeken en een goed humeur werken ook prima.",
   "🔴🔵 'Gotta catch 'em all' geldt hier ook gewoon voor zonsondergangfoto's.",
   "🧊 Let It Go is verplichte muziek zodra iemand de airco te koud heeft gezet.",
-  "🌟 Je hebt zojuist het geheime paasei gevonden. Niemand die het weet — behalve jij nu.",
+  "🌟 Je hebt zojuist de verborgen verrassing gevonden. Niemand die het weet — behalve jij nu.",
 ];
 
 export const dagelijkseQuotes: string[] = [
