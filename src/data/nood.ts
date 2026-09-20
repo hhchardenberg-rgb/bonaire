@@ -24,7 +24,6 @@ export const verliesInstructies = [
     stappen: [
       "Doe aangifte bij de lokale politie en bewaar het proces-verbaal.",
       "Neem contact op met de Nederlandse vertegenwoordiging in het Caribisch gebied voor een noodpaspoort.",
-      "Contactgegevens vertegenwoordiging: nog controleren voor vertrek.",
     ],
   },
   {

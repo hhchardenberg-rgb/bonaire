@@ -24,7 +24,7 @@ export default function NoodPagina() {
                   {n.telefoon}
                 </a>
               ) : (
-                <span className="text-koraal-700/70">nog controleren</span>
+                <span className="text-koraal-700/70">nog niet bekend</span>
               )}
             </li>
           ))}
@@ -73,7 +73,7 @@ export default function NoodPagina() {
                   {c.telefoon}
                 </a>
               ) : (
-                <span className="text-xs text-diepblauw-700/50">nog controleren</span>
+                <span className="text-xs text-diepblauw-700/50">nog niet bekend</span>
               )}
             </li>
           ))}

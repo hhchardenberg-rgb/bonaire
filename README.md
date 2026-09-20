@@ -54,15 +54,15 @@ je hoeft niets in de UI-code aan te passen:
 | `src/data/locaties.ts` | Locaties die op de kaartpagina staan |
 | `src/data/praktisch.ts` | Praktische informatie-secties |
 | `src/data/paklijst.ts` | Categorieën en items van de paklijst |
-| `src/data/taken.ts` | Groepsleden en taakverdeling |
+| `src/data/taken.ts` | Groepsleden (gebruikt door "Wie kiest vandaag?") |
 | `src/data/nood.ts` | Noodnummers, contacten en verlies-instructies |
-| `src/data/fun.ts` | Quizvragen, bingo-items, quotes, bucketlist-voorbeelden |
+| `src/data/fun.ts` | Quizvragen, bingo-items, quotes, bucketlist-voorbeelden, easter eggs |
 | `src/data/dagtips.ts` | Dagtips en het (statische) weerbeeld |
 
-Overal waar informatie nog niet geverifieerd is, staat bewust **"nog
-controleren"** in plaats van verzonnen prijzen, telefoonnummers of
-openingstijden. Zoek in de `src/data`-map naar `nog controleren` om te zien
-wat je nog moet invullen vóór vertrek.
+Prijzen, openingstijden en andere onzekere gegevens worden nooit verzonnen:
+waar iets niet geverifieerd is, laten we het veld gewoon weg of gebruiken we
+een neutrale formulering (bijv. "zie boekingsbevestiging"). Vul dit soort
+velden pas aan zodra je de echte, gecontroleerde informatie hebt.
 
 Kaartlinks worden automatisch gebouwd via `mapsUrl("zoekterm")` uit
 `src/lib/maps.ts` — dit opent een Google Maps-zoekopdracht die op de telefoon
@@ -143,14 +143,16 @@ src/
   beveiligingschecklist
 - [TESTPLAN.md](./TESTPLAN.md) — testlijst voor mobiel, tablet en desktop
 
-## 8. Nog in te vullen vóór vertrek
+## 8. Nog in te vullen
 
-Zoek naar `nog controleren` in `src/data/` en vul minstens het volgende aan:
+De meeste praktische gegevens staan er al in (vluchten, accommodatie,
+noodnummers). Wat nog open staat:
 
-- Vluchtnummers, bagage-afspraken
-- Adres, wifi en contactgegevens van de accommodatie
-- Reserveringsnummers voor huurauto en activiteiten
-- Openingstijden en prijzen van gidsonderdelen die je zelf wilt gebruiken
-- Noodnummers (kustwacht, ziekenhuis, verhuurders, verzekeraar)
-- Groepsleden en taken in `src/data/taken.ts`
+- Wifi-wachtwoord van de accommodatie (`src/data/trip.ts` en
+  `src/data/praktisch.ts`)
+- Reserveringsnummers voor huurauto en activiteiten (`src/data/praktisch.ts`,
+  `src/data/programma.ts`)
+- Openingstijden en prijzen van gidsonderdelen die nog geen waarde hebben
+  (`src/data/gids.ts`) — vul dit pas aan als je het zeker weet
+- Polisnummer reisverzekering
 - Eventueel een link naar een gedeeld fotoalbum in `src/data/trip.ts`

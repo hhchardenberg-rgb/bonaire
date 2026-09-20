@@ -29,7 +29,7 @@ export const praktischeInfo: PraktischSectie[] = [
         label: "Vlucht Remco & Jermaine naar Miami",
         tekst: "3 oktober 2026, 14:44 uur — AA2691 (BON → MIA), aankomst 17:55 uur. Miami is niet 'thuis' maar hun volgende bestemming.",
       },
-      { label: "Bagage", tekst: "Ruimbagage en handbagage: nog controleren per boeking" },
+      { label: "Bagage", tekst: "Ruimbagage en handbagage: zie je eigen boekingsbevestiging" },
     ],
   },
   {
@@ -40,7 +40,7 @@ export const praktischeInfo: PraktischSectie[] = [
       { label: "Adres", tekst: "Kas den Daas — 4P95+X94, Kralendijk, Caribisch Nederland" },
       { label: "Check-in", tekst: "Vanaf 15:00" },
       { label: "Check-out", tekst: "Voor 11:00" },
-      { label: "Wifi", tekst: "Netwerk en wachtwoord: nog controleren" },
+      { label: "Wifi", tekst: "Netwerk en wachtwoord: vraag dit bij aankomst aan Dennis" },
       { label: "Verhuurder", tekst: "Dennis — +599 782 9691" },
     ],
   },
@@ -50,7 +50,7 @@ export const praktischeInfo: PraktischSectie[] = [
     emoji: "🚙",
     inhoud: [
       { label: "Verhuurder", tekst: "AB Drive" },
-      { label: "Reserveringsnummer", tekst: "nog controleren" },
+      { label: "Reserveringsnummer", tekst: "Zie je eigen boekingsbevestiging" },
       { tekst: "Rijbewijs (ouder dan 1 jaar) en creditcard nodig bij ophalen." },
       { tekst: "Wegen buiten het centrum zijn vaak onverhard — rustig rijden." },
     ],
@@ -61,7 +61,7 @@ export const praktischeInfo: PraktischSectie[] = [
     emoji: "🧳",
     inhoud: [
       { tekst: "Zie de interactieve paklijst voor het volledige overzicht." },
-      { tekst: "Snorkelspullen kunnen ook lokaal gehuurd worden — nog controleren of nodig." },
+      { tekst: "Snorkelspullen kunnen ook lokaal gehuurd worden." },
     ],
   },
   {
@@ -80,7 +80,7 @@ export const praktischeInfo: PraktischSectie[] = [
     inhoud: [
       { tekst: "Officiële munt is de US dollar (USD)." },
       { tekst: "Pinnen kan op de meeste plekken, maar neem ook wat contant geld mee voor kleine strandtenten." },
-      { tekst: "Wissel- en pinkosten: nog controleren bij eigen bank." },
+      { tekst: "Check wissel- en pinkosten vooraf bij je eigen bank." },
     ],
   },
   {
@@ -90,7 +90,7 @@ export const praktischeInfo: PraktischSectie[] = [
     inhoud: [
       { tekst: "Bonaire is onderdeel van het Caribisch Nederland; voertaal is Papiaments, Nederlands en Engels worden breed gesproken." },
       { tekst: "Het rif is beschermd natuurgebied: koraal niet aanraken en geen zonnebrand met schadelijke stoffen gebruiken." },
-      { tekst: "Fooien in restaurants: rond de 10%, vaak niet verplicht — nog controleren." },
+      { tekst: "Fooien in restaurants: rond de 10%, vaak niet verplicht." },
     ],
   },
   {
@@ -98,7 +98,7 @@ export const praktischeInfo: PraktischSectie[] = [
     titel: "Internet en bereik",
     emoji: "📶",
     inhoud: [
-      { tekst: "Lokale simkaart of roamingbundel: nog controleren per provider." },
+      { tekst: "Regel een lokale simkaart of roamingbundel vooraf bij je eigen provider." },
       { tekst: "Wifi in het vakantiehuis: zie accommodatiegegevens hierboven." },
     ],
   },
@@ -121,7 +121,7 @@ export const praktischeInfo: PraktischSectie[] = [
     inhoud: [
       { tekst: "Bij spoed: bel 911." },
       { label: "Dichtstbijzijnde ziekenhuis", tekst: "Mariadal Ziekenhuis, Kralendijk" },
-      { tekst: "Zorg dat iedereen een geldige reisverzekering heeft. Polisnummer: nog controleren." },
+      { tekst: "Zorg dat iedereen een geldige reisverzekering heeft en het polisnummer bij de hand." },
     ],
   },
   {

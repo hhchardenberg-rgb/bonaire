@@ -36,8 +36,8 @@ export default function GidsPagina() {
 
       <div className="rounded-xl2 border border-dashed border-koraal-200 bg-koraal-50 p-4 text-sm text-koraal-800">
         <span className="font-semibold">Let op: </span>
-        prijzen en openingstijden zijn waar mogelijk aangegeven, maar controleer ze zelf vlak voor
-        vertrek. Bij &ldquo;nog controleren&rdquo; hebben we bewust niets verzonnen.
+        prijzen en openingstijden zijn waar mogelijk aangegeven, maar check ze zelf vlak voor
+        vertrek — we hebben bewust niets verzonnen bij plekken waar we het niet zeker wisten.
       </div>
     </div>
   );

@@ -46,8 +46,8 @@ export interface GidsItem {
   omschrijving: string;
   locatie: string;
   kaartUrl: string;
-  prijsindicatie?: string; // "nog controleren" als niet geverifieerd
-  openingstijden?: string; // "nog controleren" als niet geverifieerd
+  prijsindicatie?: string; // weglaten als niet geverifieerd
+  openingstijden?: string; // weglaten als niet geverifieerd
   tags: string[];
 }
 

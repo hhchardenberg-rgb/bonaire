@@ -78,7 +78,6 @@ export const locaties: Locatie[] = [
     id: "apotheek",
     naam: "Botika Bonaire (apotheek)",
     type: "medisch",
-    omschrijving: "Openingstijden nog controleren.",
     kaartUrl: mapsUrl("Botika Bonaire apotheek"),
   },
   {

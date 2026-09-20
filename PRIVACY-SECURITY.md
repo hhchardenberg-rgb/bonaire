@@ -49,12 +49,9 @@ project. Vink af / controleer dit voordat je de link deelt met de groep.
       kaart-app) de eigen URL van het boekje doorgeven.
 - [x] `Permissions-Policy` schakelt camera en microfoon uit; locatie is
       alleen beschikbaar voor de site zelf (`self`), niet voor derden.
-- [x] **Eén bewuste uitzondering:** de dollar/euro-omrekenaar op de
-      praktische-informatiepagina haalt de actuele wisselkoers op bij
-      [frankfurter.app](https://www.frankfurter.app) (ECB-koersen, geen
-      API-sleutel, geen cookies of tracking). Dit is de enige externe
-      netwerkaanvraag in de app en dient puur de functionaliteit
-      ("koers van vandaag"), niet analytics of advertenties.
+- [x] Geen enkele externe netwerkaanvraag meer vanuit de browser van
+      bezoekers: de dollar/euro-omrekenaar gebruikt een vast ingestelde
+      koers (maandgemiddelde) in plaats van een live koers-API.
 
 ## Privacy van reisgegevens
 

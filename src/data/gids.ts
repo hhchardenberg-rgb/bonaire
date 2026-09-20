@@ -67,7 +67,6 @@ export const gidsItems: GidsItem[] = [
     locatie: "Kaya Playa Lechi, Bonaire",
     kaartUrl: mapsUrl("Te Amo Beach Bonaire"),
     prijsindicatie: "Gratis toegankelijk",
-    openingstijden: "nog controleren",
     tags: ["zwemmen", "gezinsvriendelijk", "zand"],
   },
   {
@@ -77,8 +76,6 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Lagune aan de oostkant, populair bij windsurfers en rustzoekers.",
     locatie: "Lac Bay, Bonaire",
     kaartUrl: mapsUrl("Sorobon Beach Bonaire"),
-    prijsindicatie: "nog controleren",
-    openingstijden: "nog controleren",
     tags: ["windsurfen", "rustig", "ondiep water"],
   },
   {
@@ -88,7 +85,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Beroemde duik- en snorkelspot met een trap naar het water.",
     locatie: "Noordkant Bonaire",
     kaartUrl: mapsUrl("1000 Steps Bonaire"),
-    prijsindicatie: "Nature Fee vereist — nog controleren",
+    prijsindicatie: "Nature Fee vereist",
     openingstijden: "Overdag toegankelijk",
     tags: ["snorkelen", "duiken", "koraal"],
   },
@@ -99,7 +96,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Onbewoond eilandje voor de kust met kristalhelder water, alleen per boot bereikbaar.",
     locatie: "Voor de kust van Kralendijk",
     kaartUrl: mapsUrl("Klein Bonaire"),
-    prijsindicatie: "Bootovertocht: nog controleren",
+    prijsindicatie: "Bootovertocht",
     openingstijden: "n.v.t.",
     tags: ["snorkelen", "boottrip", "wit zand"],
   },
@@ -110,8 +107,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Restaurant aan het water, bekend om vis- en zeevruchtengerechten.",
     locatie: "Kaya Jan N.E. Craane, Kralendijk",
     kaartUrl: mapsUrl("It Rains Fishes Bonaire"),
-    prijsindicatie: "€€€ — nog controleren",
-    openingstijden: "nog controleren",
+    prijsindicatie: "€€€",
     tags: ["diner", "vis", "romantisch"],
   },
   {
@@ -121,8 +117,6 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Restaurant waar de groep op 24 september gaat eten.",
     locatie: "Bonaire",
     kaartUrl: mapsUrl("Brass Boer Bonaire"),
-    prijsindicatie: "nog controleren",
-    openingstijden: "nog controleren",
     tags: ["diner"],
   },
   {
@@ -132,8 +126,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Laagdrempelige strandtent, goed voor lunch met de voeten in het zand.",
     locatie: "Sorobon, Bonaire",
     kaartUrl: mapsUrl("Kite City Cafe Bonaire"),
-    prijsindicatie: "€€ — nog controleren",
-    openingstijden: "nog controleren",
+    prijsindicatie: "€€",
     tags: ["lunch", "strandtent", "casual"],
   },
   {
@@ -143,8 +136,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "IJs en pizza in het centrum, fijn voor na het diner.",
     locatie: "Kralendijk centrum",
     kaartUrl: mapsUrl("Gio's Gelato Bonaire"),
-    prijsindicatie: "€ — nog controleren",
-    openingstijden: "nog controleren",
+    prijsindicatie: "€",
     tags: ["ijs", "toetje", "kinderen"],
   },
   {
@@ -154,8 +146,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Groot natuurpark met wandelroutes, kliffen en flamingo's.",
     locatie: "Noord-Bonaire",
     kaartUrl: mapsUrl("Washington Slagbaai National Park Bonaire"),
-    prijsindicatie: "Entree — nog controleren",
-    openingstijden: "nog controleren",
+    prijsindicatie: "Entree",
     tags: ["wandelen", "natuur", "wildlife"],
   },
   {
@@ -165,8 +156,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Kanotochten en wandelpaden door het mangrovegebied.",
     locatie: "Lac Bay, Bonaire",
     kaartUrl: mapsUrl("Lac Bay Mangroves Bonaire"),
-    prijsindicatie: "Kanoverhuur — nog controleren",
-    openingstijden: "nog controleren",
+    prijsindicatie: "Kanoverhuur",
     tags: ["kanoën", "natuur", "rustig"],
   },
   {
@@ -209,8 +199,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Bar op palen boven het water, klassieke plek voor de sundowner.",
     locatie: "Kralendijk boulevard",
     kaartUrl: mapsUrl("Karel's Beach Bar Bonaire"),
-    prijsindicatie: "€€ — nog controleren",
-    openingstijden: "nog controleren",
+    prijsindicatie: "€€",
     tags: ["cocktails", "zonsondergang", "muziek"],
   },
   {
@@ -221,7 +210,6 @@ export const gidsItems: GidsItem[] = [
     locatie: "Kaya Amsterdam, Kralendijk",
     kaartUrl: mapsUrl("Van den Tweel Supermarkt Bonaire"),
     prijsindicatie: "n.v.t.",
-    openingstijden: "nog controleren",
     tags: ["boodschappen", "supermarkt"],
   },
   {
@@ -232,7 +220,6 @@ export const gidsItems: GidsItem[] = [
     locatie: "Kralendijk, Bonaire",
     kaartUrl: mapsUrl("Cortina Market Bonaire"),
     prijsindicatie: "n.v.t.",
-    openingstijden: "nog controleren",
     tags: ["boodschappen", "supermarkt"],
   },
   {
@@ -242,8 +229,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Opvang voor ezels, rustig ritje tussen de dieren door.",
     locatie: "Nikiboko, Bonaire",
     kaartUrl: mapsUrl("Donkey Sanctuary Bonaire"),
-    prijsindicatie: "Entree — nog controleren",
-    openingstijden: "nog controleren",
+    prijsindicatie: "Entree",
     tags: ["dieren", "rustig", "gezinsvriendelijk"],
   },
   {
@@ -253,8 +239,6 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Rustig uitzichtpunt weg van de toeristische route.",
     locatie: "Landgoed Terra Cora",
     kaartUrl: mapsUrl("Terra Cora Bonaire"),
-    prijsindicatie: "nog controleren",
-    openingstijden: "nog controleren",
     tags: ["uitzicht", "rustig"],
   },
   {
@@ -264,8 +248,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Binnenmuseum over de geschiedenis en natuur van Bonaire.",
     locatie: "Kralendijk centrum",
     kaartUrl: mapsUrl("Terramar Museum Bonaire"),
-    prijsindicatie: "Entree — nog controleren",
-    openingstijden: "nog controleren",
+    prijsindicatie: "Entree",
     tags: ["museum", "binnen", "cultuur"],
   },
   {
@@ -275,8 +258,7 @@ export const gidsItems: GidsItem[] = [
     omschrijving: "Overdekte lokale brouwerij met proeverijen.",
     locatie: "Kralendijk, Bonaire",
     kaartUrl: mapsUrl("Boardwalk Brewing Bonaire"),
-    prijsindicatie: "€€ — nog controleren",
-    openingstijden: "nog controleren",
+    prijsindicatie: "€€",
     tags: ["bier", "binnen", "gezellig"],
   },
 ];
