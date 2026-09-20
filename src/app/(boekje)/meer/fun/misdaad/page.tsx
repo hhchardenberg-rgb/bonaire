@@ -8,7 +8,7 @@ export default function MisdaadPagina() {
   return (
     <div className="space-y-6">
       <BackLink />
-      <PageHeader titel="Jermaine’s Misdaadspel" ondertitel="Los de zaak op aan de hand van de aanwijzingen" emoji="🕵️" />
+      <PageHeader titel="Jermaine’s Misdaadspel" ondertitel="Spot de boef tussen de burgers, voor de tijd om is" emoji="🕵️" />
       <MisdaadGame />
     </div>
   );
