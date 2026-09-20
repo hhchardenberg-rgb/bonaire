@@ -18,7 +18,7 @@ const secties = [
       { href: "/meer/fun/kiezer", label: "Wie kiest vandaag?", emoji: "🎲", omschrijving: "Laat het lot beslissen" },
       { href: "/meer/fun/haai", label: "Ella's haaienspel", emoji: "🦈", omschrijving: "Pacman-stijl: eet vissen en kwallen, ontwijk de octopussen" },
       { href: "/meer/fun/snake", label: "Charella's Snake Game", emoji: "🐍", omschrijving: "Sprookjesstijl slangenspel: verzamel schatten" },
-      { href: "/meer/fun/duiven", label: "Romcom's Duivenspel", emoji: "🐦", omschrijving: "Vang broodkruimels, ontwijk kat, bal en bezem" },
+      { href: "/meer/fun/duiven", label: "Remco's Duivenspel", emoji: "🐦", omschrijving: "Vang broodkruimels, ontwijk kat, bal en bezem" },
       { href: "/meer/fun/konijnen", label: "Bart’s Konijnenhok", emoji: "🐰", omschrijving: "Tik de konijnen weg, mis de vos — 30 seconden" },
       { href: "/meer/fun/misdaad", label: "Jermaine’s Misdaadspel", emoji: "🕵️", omschrijving: "Los de zaak op met aanwijzingen over de verdachte" },
       { href: "/meer/fun/bingo", label: "Vakantie-bingo", emoji: "🎉", omschrijving: "Vink af wat je tegenkomt" },

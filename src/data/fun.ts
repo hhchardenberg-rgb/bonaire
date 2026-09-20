@@ -94,7 +94,6 @@ export const dagelijkseQuotes: string[] = [
 
 export const bucketlistVoorbeelden: string[] = [
   "Nachtduik of nachtsnorkel doen",
-  "Alle groepsleden een keer laten koken",
   "Een lokale specialiteit proeven",
   "De hele Washington Slagbaai-route rijden",
   "Een foto met een flamingo op de achtergrond",
