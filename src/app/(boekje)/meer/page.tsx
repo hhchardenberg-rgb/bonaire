@@ -9,7 +9,6 @@ const secties = [
     items: [
       { href: "/meer/praktisch", label: "Praktische informatie", emoji: "🧳", omschrijving: "Vlucht, accommodatie, geld, tijdverschil en meer" },
       { href: "/meer/paklijst", label: "Paklijst", emoji: "✅", omschrijving: "Vink af wat al in de koffer zit" },
-      { href: "/meer/wie-doet-wat", label: "Wie doet wat?", emoji: "🙋", omschrijving: "Taakverdeling van de groep" },
       { href: "/nood", label: "Nood & hulp", emoji: "🆘", omschrijving: "Noodnummers en belangrijke contacten" },
     ],
   },

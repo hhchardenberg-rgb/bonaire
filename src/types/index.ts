@@ -1,4 +1,4 @@
-export type ActiviteitStatus = "gepland" | "bevestigd" | "afgerond";
+export type ActiviteitStatus = "optie" | "gepland" | "bevestigd" | "afgerond";
 
 export interface Activiteit {
   id: string;
@@ -79,13 +79,6 @@ export interface PaklijstCategorie {
   naam: string;
   emoji: string;
   items: PaklijstItem[];
-}
-
-export interface Taak {
-  id: string;
-  naam: string;
-  toegewezenAan: string[];
-  omschrijving?: string;
 }
 
 export interface Contactpersoon {
