@@ -14,7 +14,7 @@ export const trip = {
     checkIn: "vanaf 15:00",
     checkOut: "voor 11:00",
     wifi: "Netwerk: nog controleren · Wachtwoord: nog controleren",
-    contact: "Verhuurder: nog controleren",
+    contact: "Verhuurder: Dennis — +599 782 9691",
     kaartUrl: "https://maps.google.com/?q=Kaya+Kunuku+12+Kralendijk+Bonaire",
   },
   // Vul hier een link naar een gedeeld album (bv. Google Foto's of iCloud) in voor de fotomuur.

@@ -1,13 +1,12 @@
 export const noodnummers = [
   { label: "Alarmnummer (politie / brandweer / ambulance)", telefoon: "911" },
-  { label: "Kustwacht Caribisch Gebied", telefoon: "" },
-  { label: "Mariadal Ziekenhuis, Kralendijk", telefoon: "" },
+  { label: "Kustwacht Caribisch Gebied", telefoon: "913" },
+  { label: "Mariadal Ziekenhuis, Kralendijk", telefoon: "+599 715 8900" },
 ];
 
 export const noodcontacten = [
-  { naam: "Verhuurder vakantiehuis", rol: "Accommodatie", telefoon: "" },
-  { naam: "Autoverhuurder", rol: "Huurauto", telefoon: "" },
-  { naam: "Reisverzekeraar (alarmcentrale)", rol: "Verzekering", telefoon: "" },
+  { naam: "Dennis", rol: "Verhuurder vakantiehuis", telefoon: "+599 782 9691" },
+  { naam: "AB Drive", rol: "Autoverhuurder", telefoon: "+599-717-8980" },
 ];
 
 export const verliesInstructies = [

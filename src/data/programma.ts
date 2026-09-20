@@ -38,7 +38,7 @@ export const programma: Dagprogramma[] = [
         locatie: "Verhuurbalie bij de luchthaven",
         omschrijving: "Twee auto's voor de hele groep. Rijbewijzen en creditcard meenemen.",
         praktisch: "Reserveringsnummer: nog controleren.",
-        contact: "Verhuurder: nog controleren",
+        contact: "AB Drive: +599-717-8980",
         kaartUrl: mapsUrl("Flamingo International Airport Bonaire"),
         fotoEmoji: "🚙",
         status: "gepland",

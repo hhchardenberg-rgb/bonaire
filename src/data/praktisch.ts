@@ -41,7 +41,7 @@ export const praktischeInfo: PraktischSectie[] = [
       { label: "Check-in", tekst: "Vanaf 15:00" },
       { label: "Check-out", tekst: "Voor 11:00" },
       { label: "Wifi", tekst: "Netwerk en wachtwoord: nog controleren" },
-      { label: "Verhuurder", tekst: "Naam en contact: nog controleren" },
+      { label: "Verhuurder", tekst: "Dennis — +599 782 9691" },
     ],
   },
   {
@@ -49,7 +49,7 @@ export const praktischeInfo: PraktischSectie[] = [
     titel: "Huurauto",
     emoji: "🚙",
     inhoud: [
-      { label: "Verhuurder", tekst: "nog controleren" },
+      { label: "Verhuurder", tekst: "AB Drive" },
       { label: "Reserveringsnummer", tekst: "nog controleren" },
       { tekst: "Rijbewijs (ouder dan 1 jaar) en creditcard nodig bij ophalen." },
       { tekst: "Wegen buiten het centrum zijn vaak onverhard — rustig rijden." },
@@ -108,10 +108,10 @@ export const praktischeInfo: PraktischSectie[] = [
     emoji: "📞",
     inhoud: [
       { label: "Alarmnummer (politie, brandweer, ambulance)", tekst: "911", telefoon: "911" },
-      { label: "Kustwacht Caribisch Gebied", tekst: "nog controleren", telefoon: "" },
-      { label: "Mariadal Ziekenhuis", tekst: "nog controleren", telefoon: "" },
-      { label: "Verhuurder accommodatie", tekst: "nog controleren", telefoon: "" },
-      { label: "Autoverhuurder", tekst: "nog controleren", telefoon: "" },
+      { label: "Kustwacht Caribisch Gebied", tekst: "913", telefoon: "913" },
+      { label: "Mariadal Ziekenhuis", tekst: "+599 715 8900", telefoon: "+599 715 8900" },
+      { label: "Verhuurder accommodatie (Dennis)", tekst: "+599 782 9691", telefoon: "+599 782 9691" },
+      { label: "Autoverhuurder (AB Drive)", tekst: "+599-717-8980", telefoon: "+599-717-8980" },
     ],
   },
   {
