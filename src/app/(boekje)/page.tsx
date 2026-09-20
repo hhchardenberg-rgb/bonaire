@@ -20,7 +20,6 @@ export default function WelkomstPagina() {
 
       <div className="text-center">
         <h1 className="font-display text-3xl font-bold text-diepblauw-800">{trip.titel}</h1>
-        <p className="mt-1 text-sm font-medium text-turquoise-700">{trip.ondertitel}</p>
         <p className="mt-2 text-sm text-diepblauw-700/70">
           {formatDatumLang(trip.startDatum)} — {formatDatumLang(trip.eindDatum)}
         </p>

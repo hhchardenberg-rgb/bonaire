@@ -1,12 +1,9 @@
 export const trip = {
   titel: "Bonaire 2026",
-  ondertitel: "Vriendengroep-vakantie",
   startDatum: "2026-09-22", // aankomst (heenvlucht OR393, 08:15 uur)
-  // Terugvlucht nog niet doorgegeven — hier voorlopig aangenomen dat de trip
-  // even lang duurt als het oorspronkelijke programma (9 dagen). Pas dit aan
-  // zodra de echte terugvluchtdatum bekend is, en verschuif src/data/programma.ts
-  // en src/data/dagtips.ts mee.
-  eindDatum: "2026-09-30", // vertrek terug — nog controleren
+  // De groep vertrekt in etappes: Charella & Bart op 30 sept, Ella op 2 okt,
+  // Remco & Jermaine (de laatsten) op 3 okt. eindDatum = laatste vertrekdag.
+  eindDatum: "2026-10-03",
   tijdzone: "AST (UTC-4, geen zomertijd op Bonaire)",
   bestemming: "Kralendijk, Bonaire",
   welkomstTekst:

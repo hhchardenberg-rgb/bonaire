@@ -21,8 +21,11 @@ export const dagtips: Record<string, string> = {
   "2026-09-26": "Een vrije dag is een kans om een van de 'nog controleren'-plekken uit de gids te checken.",
   "2026-09-27": "Duiken op een nuchtere maag? Neem wel iets lichts, zoals fruit, voor de energie.",
   "2026-09-28": "Ga voor zonsondergang naar de zoutpannen voor het mooiste licht op de flamingo's.",
-  "2026-09-29": "Begin op tijd met inpakken — de laatste ochtend is altijd drukker dan gepland.",
-  "2026-09-30": "Check ruim op tijd in voor de terugvlucht en geniet nog van het uitzicht vanuit het vliegtuig.",
+  "2026-09-29": "Laatste hele dag met de hele groep — een mooi moment voor een gezamenlijke foto.",
+  "2026-09-30": "Charella & Bart: check ruim op tijd in voor de terugvlucht en geniet nog van het uitzicht vanuit het vliegtuig.",
+  "2026-10-01": "Nog een paar rustige dagen over — mooi moment om een 'nog controleren'-plek uit de gids te checken.",
+  "2026-10-02": "Ella: check ruim op tijd in voor de terugvlucht naar Amsterdam.",
+  "2026-10-03": "Laatste dag: check het huis nog eens goed na voor het uitchecken, en geniet van de laatste uurtjes.",
 };
 
 export const algemeneDagtips: string[] = [

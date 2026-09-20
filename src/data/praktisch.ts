@@ -11,10 +11,21 @@ export const praktischeInfo: PraktischSectie[] = [
     titel: "Vlucht",
     emoji: "✈️",
     inhoud: [
-      { label: "Heenvlucht", tekst: "22 september 2026, 08:15 uur — vluchtnummer OR393" },
+      { label: "Heenvlucht (iedereen)", tekst: "22 september 2026, 08:15 uur — vluchtnummer OR393" },
       { label: "Vertrekhal", tekst: "Vertrekhal 3" },
       { label: "Check-in balies", tekst: "Balie 22–23" },
-      { label: "Terugvlucht", tekst: "30 september 2026 (nog controleren) — vluchtnummer: nog controleren" },
+      {
+        label: "Terugvlucht Charella & Bart",
+        tekst: "30 september 2026, 14:44 uur — AA2691 (BON → MIA). Aansluitende vlucht: nog controleren.",
+      },
+      {
+        label: "Terugvlucht Ella",
+        tekst: "2 oktober 2026, 16:35 uur — OR393 (BON → AMS), aankomst 3 oktober 10:55 uur. Boekingsreferentie 200061985925.",
+      },
+      {
+        label: "Terugvlucht Remco & Jermaine",
+        tekst: "3 oktober 2026, 14:44 uur — AA2691 (BON → MIA). Aansluitende vlucht: nog controleren.",
+      },
       { label: "Bagage", tekst: "Ruimbagage en handbagage: nog controleren per boeking" },
     ],
   },
