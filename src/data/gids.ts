@@ -115,6 +115,17 @@ export const gidsItems: GidsItem[] = [
     tags: ["diner", "vis", "romantisch"],
   },
   {
+    id: "brass-boer",
+    naam: "Brass Boer",
+    categorie: "eten-drinken",
+    omschrijving: "Restaurant waar de groep op 24 september gaat eten.",
+    locatie: "Bonaire",
+    kaartUrl: mapsUrl("Brass Boer Bonaire"),
+    prijsindicatie: "nog controleren",
+    openingstijden: "nog controleren",
+    tags: ["diner"],
+  },
+  {
     id: "kite-city",
     naam: "Kite City Café",
     categorie: "eten-drinken",

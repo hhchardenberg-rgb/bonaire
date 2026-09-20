@@ -134,6 +134,17 @@ export const programma: Dagprogramma[] = [
         fotoEmoji: "🥪",
         status: "gepland",
       },
+      {
+        id: "diner-brass-boer",
+        titel: "Diner bij Brass Boer",
+        datum: "2026-09-24",
+        tijd: "19:30",
+        locatie: "Brass Boer, Bonaire",
+        omschrijving: "Samen uit eten.",
+        kaartUrl: mapsUrl("Brass Boer Bonaire"),
+        fotoEmoji: "🍽️",
+        status: "bevestigd",
+      },
     ],
   },
   {
