@@ -20,14 +20,12 @@ export const locaties: Locatie[] = [
     id: "it-rains-fishes",
     naam: "It Rains Fishes",
     type: "eten-drinken",
-    omschrijving: "Welkomstdiner.",
     kaartUrl: mapsUrl("It Rains Fishes Bonaire"),
   },
   {
     id: "zeezicht",
     naam: "Zeezicht Restaurant",
     type: "eten-drinken",
-    omschrijving: "Afscheidsdiner.",
     kaartUrl: mapsUrl("Zeezicht Restaurant Bonaire"),
   },
   {
