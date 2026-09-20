@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { MapLinkButton } from "@/components/MapLinkButton";
+import { ValutaCalculator } from "@/components/ValutaCalculator";
 import { praktischeInfo } from "@/data/praktisch";
 import { trip } from "@/data/trip";
 
@@ -27,6 +28,8 @@ export default function PraktischPagina() {
           <MapLinkButton url={trip.accommodatie.kaartUrl} />
         </div>
       </div>
+
+      <ValutaCalculator />
 
       <div className="space-y-4">
         {praktischeInfo.map((sectie) => (
