@@ -4,7 +4,7 @@ export function HeroIllustration() {
       viewBox="0 0 400 220"
       role="img"
       aria-label="Illustratie van een zonsondergang boven zee met een palmboom, in sfeer van Bonaire"
-      className="h-44 w-full rounded-xl3 shadow-floating sm:h-56"
+      className="h-44 w-full rounded-b-xl3 shadow-floating sm:h-56"
     >
       <defs>
         <linearGradient id="lucht" x1="0" y1="0" x2="0" y2="1">

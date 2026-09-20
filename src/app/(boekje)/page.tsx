@@ -17,7 +17,7 @@ const snelknoppen = [
 export default function WelkomstPagina() {
   return (
     <div className="space-y-6">
-      <div className="relative">
+      <div className="relative -mx-4 -mt-4">
         <HeroIllustration />
         <DansendeBeestjes />
       </div>

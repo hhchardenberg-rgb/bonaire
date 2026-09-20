@@ -33,7 +33,7 @@ export function DansendeBeestjes() {
         onClick={tikken}
         aria-label={danst ? "Zet het muziekje uit" : "Geheim: tik voor een dansje"}
         aria-pressed={danst}
-        className={`absolute -bottom-3 -right-2 h-14 w-14 overflow-hidden rounded-full border-2 border-white shadow-floating focus-ring ${
+        className={`absolute -bottom-3 right-3 h-14 w-14 overflow-hidden rounded-full border-2 border-white shadow-floating focus-ring ${
           danst ? "animate-dance" : "animate-bob"
         }`}
       >
