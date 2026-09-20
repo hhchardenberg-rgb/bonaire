@@ -12,6 +12,7 @@ const snelknoppen = [
   { href: "/gids", label: "Gids", emoji: "🧭" },
   { href: "/kaart", label: "Kaart", emoji: "📍" },
   { href: "/meer/praktisch", label: "Praktisch", emoji: "🧳" },
+  { href: "/meer/valuta", label: "Wisselkoers", emoji: "💱" },
 ];
 
 export default function WelkomstPagina() {
@@ -39,7 +40,7 @@ export default function WelkomstPagina() {
 
       <div>
         <h2 className="mb-2 font-display text-sm font-semibold text-diepblauw-700">Snel naar</h2>
-        <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-5">
+        <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-6">
           {snelknoppen.map((knop) => (
             <Link
               key={knop.href}

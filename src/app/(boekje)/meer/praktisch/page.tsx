@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { MapLinkButton } from "@/components/MapLinkButton";
 import { ValutaCalculator } from "@/components/ValutaCalculator";
+import { TijdverschilLive } from "@/components/TijdverschilLive";
 import { praktischeInfo } from "@/data/praktisch";
 import { trip } from "@/data/trip";
 
@@ -42,6 +43,11 @@ export default function PraktischPagina() {
                 ⌄
               </span>
             </summary>
+            {sectie.id === "tijdverschil" && (
+              <div className="mt-3">
+                <TijdverschilLive />
+              </div>
+            )}
             <ul className="mt-3 space-y-2 text-sm text-diepblauw-800">
               {sectie.inhoud.map((regel, i) => (
                 <li key={i}>
