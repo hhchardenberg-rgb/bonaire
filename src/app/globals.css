@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  min-height: 100dvh;
+}
+
+body {
+  @apply bg-zand-50 text-diepblauw-900;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  @apply bg-koraal-200 text-diepblauw-900;
+}
+
+.focus-ring {
+  @apply outline-none focus-visible:ring-4 focus-visible:ring-turquoise-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zand-50;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
