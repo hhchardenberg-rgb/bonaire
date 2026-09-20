@@ -11,20 +11,23 @@ export const praktischeInfo: PraktischSectie[] = [
     titel: "Vlucht",
     emoji: "✈️",
     inhoud: [
-      { label: "Heenvlucht (iedereen)", tekst: "22 september 2026, 08:15 uur — vluchtnummer OR393" },
+      {
+        label: "Heenvlucht (iedereen)",
+        tekst: "22 september 2026, 08:15 uur vertrek — vluchtnummer OR393, aankomst Bonaire 12:45 uur.",
+      },
       { label: "Vertrekhal", tekst: "Vertrekhal 3" },
       { label: "Check-in balies", tekst: "Balie 22–23" },
       {
-        label: "Terugvlucht Charella & Bart",
-        tekst: "30 september 2026, 14:44 uur — AA2691 (BON → MIA). Aansluitende vlucht: nog controleren.",
+        label: "Vlucht Charella & Bart naar Miami",
+        tekst: "30 september 2026, 14:44 uur — AA2691 (BON → MIA), aankomst 17:55 uur. Miami is niet 'thuis' maar hun volgende bestemming.",
       },
       {
-        label: "Terugvlucht Ella",
+        label: "Terugvlucht Ella naar Amsterdam",
         tekst: "2 oktober 2026, 16:35 uur — OR393 (BON → AMS), aankomst 3 oktober 10:55 uur. Boekingsreferentie 200061985925.",
       },
       {
-        label: "Terugvlucht Remco & Jermaine",
-        tekst: "3 oktober 2026, 14:44 uur — AA2691 (BON → MIA). Aansluitende vlucht: nog controleren.",
+        label: "Vlucht Remco & Jermaine naar Miami",
+        tekst: "3 oktober 2026, 14:44 uur — AA2691 (BON → MIA), aankomst 17:55 uur. Miami is niet 'thuis' maar hun volgende bestemming.",
       },
       { label: "Bagage", tekst: "Ruimbagage en handbagage: nog controleren per boeking" },
     ],
