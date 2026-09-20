@@ -10,6 +10,7 @@ const items = [
   { href: "/meer/fun/snake", label: "Charella's Snake Game", emoji: "🐍" },
   { href: "/meer/fun/duiven", label: "Romcom's Duivenspel", emoji: "🐦" },
   { href: "/meer/fun/konijnen", label: "Bart’s Konijnenhok", emoji: "🐰" },
+  { href: "/meer/fun/misdaad", label: "Jermaine’s Misdaadspel", emoji: "🕵️" },
   { href: "/meer/fun/bingo", label: "Vakantie-bingo", emoji: "🎉" },
   { href: "/meer/fun/quiz", label: "Bonaire-quiz", emoji: "🧠" },
   { href: "/meer/fun/bucketlist", label: "Bucketlist", emoji: "📋" },
