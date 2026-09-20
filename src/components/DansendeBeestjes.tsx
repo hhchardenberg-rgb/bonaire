@@ -6,9 +6,18 @@ export function DansendeBeestjes() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [danst, setDanst] = useState(false);
 
-  function speelAf() {
-    setDanst(true);
+  function tikken() {
     const audio = audioRef.current;
+    if (danst) {
+      // Al aan het dansen/spelen: tweede tik zet het muziekje weer uit.
+      setDanst(false);
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+      return;
+    }
+    setDanst(true);
     if (audio) {
       audio.currentTime = 0;
       audio.play().catch(() => {
@@ -21,8 +30,9 @@ export function DansendeBeestjes() {
     <>
       <button
         type="button"
-        onClick={speelAf}
-        aria-label="Geheim: tik voor een dansje"
+        onClick={tikken}
+        aria-label={danst ? "Zet het muziekje uit" : "Geheim: tik voor een dansje"}
+        aria-pressed={danst}
         className={`absolute -bottom-3 -right-2 h-14 w-14 overflow-hidden rounded-full border-2 border-white shadow-floating focus-ring ${
           danst ? "animate-dance" : "animate-bob"
         }`}
