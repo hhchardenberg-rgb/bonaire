@@ -3,6 +3,7 @@ import { HeroIllustration } from "@/components/HeroIllustration";
 import { Countdown } from "@/components/Countdown";
 import { WeerEnTip } from "@/components/WeerEnTip";
 import { DansendeBeestjes } from "@/components/DansendeBeestjes";
+import { AmstelBrightEgg } from "@/components/AmstelBrightEgg";
 import { trip } from "@/data/trip";
 import { formatDatumLang } from "@/lib/date";
 
@@ -88,6 +89,8 @@ export default function WelkomstPagina() {
         <h2 className="mb-2 font-display text-sm font-semibold text-diepblauw-700">Weer & dagtip</h2>
         <WeerEnTip />
       </div>
+
+      <AmstelBrightEgg />
     </div>
   );
 }
