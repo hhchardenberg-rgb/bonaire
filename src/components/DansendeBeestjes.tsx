@@ -1,55 +1,119 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const BEESTJES = [
+  "/easter-egg/beestje-1.webp",
+  "/easter-egg/beestje-2.webp",
+  "/easter-egg/beestje-3.webp",
+  "/easter-egg/beestje-4.webp",
+  "/easter-egg/beestje-5.webp",
+  "/easter-egg/beestje-6.webp",
+  "/easter-egg/beestje-7.webp",
+];
+
+interface Positie {
+  x: number;
+  y: number;
+}
+
+function willekeurigePositie(): Positie {
+  return { x: 6 + Math.random() * 82, y: 10 + Math.random() * 72 };
+}
 
 export function DansendeBeestjes() {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const intervalsRef = useRef<ReturnType<typeof setInterval>[]>([]);
   const [danst, setDanst] = useState(false);
+  const [posities, setPosities] = useState<Positie[]>(() => BEESTJES.map(willekeurigePositie));
 
-  function tikken() {
+  function stop() {
+    setDanst(false);
     const audio = audioRef.current;
-    if (danst) {
-      // Al aan het dansen/spelen: tweede tik zet het muziekje weer uit.
-      setDanst(false);
-      if (audio) {
-        audio.pause();
-        audio.currentTime = 0;
-      }
-      return;
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
     }
+    intervalsRef.current.forEach(clearInterval);
+    intervalsRef.current = [];
+  }
+
+  function start() {
+    setPosities(BEESTJES.map(willekeurigePositie));
     setDanst(true);
+    const audio = audioRef.current;
     if (audio) {
       audio.currentTime = 0;
       audio.play().catch(() => {
         // Autoplay-restricties: negeren, de gebruiker heeft net zelf getikt dus dit hoort te lukken.
       });
     }
+    intervalsRef.current = BEESTJES.map((_, i) =>
+      setInterval(
+        () => {
+          setPosities((huidig) => {
+            const nieuw = [...huidig];
+            nieuw[i] = willekeurigePositie();
+            return nieuw;
+          });
+        },
+        1600 + Math.random() * 1400
+      )
+    );
   }
+
+  function tikken() {
+    if (danst) stop();
+    else start();
+  }
+
+  useEffect(() => {
+    return () => {
+      intervalsRef.current.forEach(clearInterval);
+    };
+  }, []);
 
   return (
     <>
       <button
         type="button"
         onClick={tikken}
-        aria-label={danst ? "Zet het muziekje uit" : "Geheim: tik voor een dansje"}
+        aria-label={danst ? "Zet het dansfeest uit" : "Geheim: tik voor een dansfeest"}
         aria-pressed={danst}
-        className={`absolute -bottom-3 right-3 h-14 w-14 overflow-hidden rounded-full border-2 border-white shadow-floating focus-ring ${
+        className={`absolute -bottom-3 right-3 h-14 w-14 overflow-hidden rounded-full border-2 border-white bg-white shadow-floating focus-ring ${
           danst ? "animate-dance" : "animate-bob"
         }`}
       >
-        <img
-          src="/easter-egg/beestjes.webp"
-          alt=""
-          aria-hidden
-          className="h-full w-full scale-[2.6] object-cover object-left"
-        />
+        <img src="/easter-egg/beestje-1.webp" alt="" aria-hidden className="h-full w-full object-contain p-1.5" />
       </button>
-      <audio
-        ref={audioRef}
-        src="/easter-egg/dansliedje.mp3"
-        onEnded={() => setDanst(false)}
-        preload="none"
-      />
+
+      {danst && (
+        <div className="fixed inset-0 z-50 overflow-hidden bg-diepblauw-900/25 backdrop-blur-[1px]">
+          {BEESTJES.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              alt=""
+              aria-hidden
+              className="animate-dance absolute h-16 w-16 object-contain drop-shadow-lg sm:h-20 sm:w-20"
+              style={{
+                left: `${posities[i].x}vw`,
+                top: `${posities[i].y}vh`,
+                transition: "left 1.6s ease-in-out, top 1.6s ease-in-out",
+              }}
+            />
+          ))}
+          <button
+            type="button"
+            onClick={stop}
+            className="focus-ring fixed right-4 top-4 z-[60] rounded-full bg-white px-4 py-2 text-sm font-semibold text-diepblauw-800 shadow-floating"
+          >
+            ✕ Stop het dansfeest
+          </button>
+        </div>
+      )}
+
+      <audio ref={audioRef} src="/easter-egg/dansliedje.mp3" onEnded={stop} preload="none" />
     </>
   );
 }
