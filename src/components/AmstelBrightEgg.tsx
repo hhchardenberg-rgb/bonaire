@@ -82,7 +82,7 @@ export function AmstelBrightEgg() {
       </button>
 
       {regent && (
-        <div className="fixed inset-0 z-50 overflow-hidden">
+        <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
           {druppels.map((d, i) => (
             <Flesje
               key={i}
@@ -99,7 +99,7 @@ export function AmstelBrightEgg() {
           <button
             type="button"
             onClick={stop}
-            className="focus-ring fixed right-4 top-4 z-[60] rounded-full bg-white px-4 py-2 text-sm font-semibold text-diepblauw-800 shadow-floating"
+            className="focus-ring pointer-events-auto fixed right-4 top-4 z-[60] rounded-full bg-white px-4 py-2 text-sm font-semibold text-diepblauw-800 shadow-floating"
           >
             ✕ Zet uit
           </button>
