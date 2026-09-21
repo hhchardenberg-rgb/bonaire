@@ -42,6 +42,30 @@ export const quizVragen: QuizVraag[] = [
     opties: ["4 uur", "5 uur", "6 uur", "8 uur"],
     antwoordIndex: 2,
   },
+  {
+    id: "q7",
+    vraag: "Wat is de hoofdstad van Bonaire?",
+    opties: ["Kralendijk", "Willemstad", "Oranjestad", "Philipsburg"],
+    antwoordIndex: 0,
+  },
+  {
+    id: "q8",
+    vraag: "Hoe heet de hoogste berg van Bonaire?",
+    opties: ["Brandaris", "Christoffelberg", "Sint Willibrordusberg", "Tafelberg"],
+    antwoordIndex: 0,
+  },
+  {
+    id: "q9",
+    vraag: "Bonaire is een bijzondere gemeente van welk land?",
+    opties: ["Nederland", "Frankrijk", "Venezuela", "Verenigde Staten"],
+    antwoordIndex: 0,
+  },
+  {
+    id: "q10",
+    vraag: "Voor welke markt werd het biertje Amstel Bright oorspronkelijk speciaal gebrouwen, op Curaçao?",
+    opties: ["De Caribische markt", "De Aziatische markt", "De Amerikaanse markt", "De Afrikaanse markt"],
+    antwoordIndex: 0,
+  },
 ];
 
 export const bingoItems: string[] = [
