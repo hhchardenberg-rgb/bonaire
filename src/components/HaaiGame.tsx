@@ -10,6 +10,8 @@ type Positie = { x: number; y: number };
 
 const CEL = 32;
 const TICK_MS = 220;
+const MACHT_DUUR_TICKS = Math.round(5000 / TICK_MS);
+const PUNTEN_OCTOPUS = 15;
 const RICHTINGEN: Record<string, Richting> = {
   boven: { dx: 0, dy: -1 },
   onder: { dx: 0, dy: 1 },
@@ -53,6 +55,26 @@ function kortstePad(rooster: Rooster, van: Positie, naar: Positie): Positie | nu
   return null;
 }
 
+function vluchtStap(rooster: Rooster, van: Positie, weg: Positie): Positie | null {
+  const buren = Object.values(RICHTINGEN)
+    .map((r) => ({ x: van.x + r.dx, y: van.y + r.dy }))
+    .filter((p) => !isMuur(rooster, p.x, p.y));
+  if (buren.length === 0) return null;
+
+  let beste: Positie[] = [];
+  let besteAfstand = -1;
+  for (const b of buren) {
+    const afstand = Math.abs(b.x - weg.x) + Math.abs(b.y - weg.y);
+    if (afstand > besteAfstand) {
+      besteAfstand = afstand;
+      beste = [b];
+    } else if (afstand === besteAfstand) {
+      beste.push(b);
+    }
+  }
+  return beste[Math.floor(Math.random() * beste.length)];
+}
+
 function telEetbaar(rooster: Rooster): number {
   let aantal = 0;
   for (const rij of rooster) {
@@ -71,10 +93,13 @@ export function HaaiGame() {
   const roosterRef = useRef<Rooster>(maakRooster());
   const spelerRef = useRef<Positie>(vindSymbool("P"));
   const octopussenRef = useRef<Positie[]>([vindSymbool("E"), vindSymbool("F")]);
+  const octopusStartsRef = useRef<Positie[]>([vindSymbool("E"), vindSymbool("F")]);
   const huidigeRichtingRef = useRef<Richting>({ dx: 0, dy: 0 });
   const gewenstRichtingRef = useRef<Richting>({ dx: 0, dy: 0 });
   const tikTellerRef = useRef(0);
+  const machtRef = useRef(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [machtTicks, setMachtTicks] = useState(0);
 
   const teEten = useRef(telEetbaar(roosterRef.current));
 
@@ -82,6 +107,7 @@ export function HaaiGame() {
     roosterRef.current = maakRooster();
     spelerRef.current = vindSymbool("P");
     octopussenRef.current = [vindSymbool("E"), vindSymbool("F")];
+    octopusStartsRef.current = [vindSymbool("E"), vindSymbool("F")];
     roosterRef.current[spelerRef.current.y][spelerRef.current.x] = " ";
     for (const octo of octopussenRef.current) {
       roosterRef.current[octo.y][octo.x] = " ";
@@ -89,6 +115,8 @@ export function HaaiGame() {
     huidigeRichtingRef.current = { dx: 0, dy: 0 };
     gewenstRichtingRef.current = { dx: 0, dy: 0 };
     teEten.current = telEetbaar(roosterRef.current);
+    machtRef.current = 0;
+    setMachtTicks(0);
     setScore(0);
     setStatus("spelen");
   }, []);
@@ -127,14 +155,29 @@ export function HaaiGame() {
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     const speler = spelerRef.current;
+    const machtActief = machtRef.current > 0;
     ctx.save();
     ctx.translate(speler.x * CEL + CEL / 2, speler.y * CEL + CEL / 2);
+    if (machtActief) {
+      ctx.beginPath();
+      ctx.arc(0, 0, CEL * 0.56, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(251, 191, 36, 0.4)";
+      ctx.fill();
+    }
     if (huidigeRichtingRef.current.dx < 0) ctx.scale(-1, 1);
     ctx.fillText("🦈", 0, 1);
     ctx.restore();
 
     for (const octo of octopussenRef.current) {
+      ctx.save();
+      if (machtActief) {
+        // Bijna om: knipperen als waarschuwing, zoals bange spoken in Pac-Man.
+        const bijnaOm = machtRef.current <= 6;
+        ctx.globalAlpha = bijnaOm && tikTellerRef.current % 2 === 0 ? 0.5 : 0.85;
+        ctx.filter = "grayscale(75%) brightness(1.6)";
+      }
       ctx.fillText("🐙", octo.x * CEL + CEL / 2, octo.y * CEL + CEL / 2 + 1);
+      ctx.restore();
     }
   }, []);
 
@@ -168,23 +211,43 @@ export function HaaiGame() {
             return nieuw;
           });
           teEten.current -= 1;
+          if (cel === "o") {
+            // Kwal op = superkracht: de octopussen worden even bang en eetbaar.
+            machtRef.current = MACHT_DUUR_TICKS;
+          }
         }
       }
 
-      // De octopussen bewegen op halve snelheid richting de haai.
+      // De octopussen bewegen op halve snelheid; tijdens superkracht vluchten ze juist weg.
       tikTellerRef.current += 1;
       if (tikTellerRef.current % 2 === 0) {
+        const bangVoorSpeler = machtRef.current > 0;
         octopussenRef.current = octopussenRef.current.map((octo) => {
-          const stap = kortstePad(rooster, octo, spelerRef.current);
+          const stap = bangVoorSpeler
+            ? vluchtStap(rooster, octo, spelerRef.current)
+            : kortstePad(rooster, octo, spelerRef.current);
           return stap ?? octo;
         });
       }
 
-      const geraakt = octopussenRef.current.some(
+      if (machtRef.current > 0) {
+        machtRef.current -= 1;
+        setMachtTicks(machtRef.current);
+      }
+
+      const geraaktIndex = octopussenRef.current.findIndex(
         (octo) => octo.x === spelerRef.current.x && octo.y === spelerRef.current.y
       );
-      if (geraakt) {
-        setStatus("game-over");
+      if (geraaktIndex !== -1) {
+        if (machtRef.current > 0) {
+          // Superkracht actief: de octopus wordt verslagen en respawnt op zijn startplek.
+          const nieuweOctopussen = [...octopussenRef.current];
+          nieuweOctopussen[geraaktIndex] = octopusStartsRef.current[geraaktIndex];
+          octopussenRef.current = nieuweOctopussen;
+          setScore((s) => s + PUNTEN_OCTOPUS);
+        } else {
+          setStatus("game-over");
+        }
       } else if (teEten.current <= 0) {
         setStatus("gewonnen");
       }
@@ -274,7 +337,13 @@ export function HaaiGame() {
     <div className="space-y-4">
       <div className="flex items-center justify-between text-sm">
         <span className="font-semibold text-diepblauw-800">Score: {score}</span>
-        <span className="text-diepblauw-700/60">Hoogste: {hoogsteScore}</span>
+        {machtTicks > 0 ? (
+          <span className="font-semibold text-zon-600">
+            ⚡ Superkracht: {Math.ceil((machtTicks * TICK_MS) / 1000)}s
+          </span>
+        ) : (
+          <span className="text-diepblauw-700/60">Hoogste: {hoogsteScore}</span>
+        )}
       </div>
 
       <div className="relative overflow-hidden rounded-xl2 shadow-card">
@@ -288,7 +357,10 @@ export function HaaiGame() {
         {status !== "spelen" && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-diepblauw-900/80 p-4 text-center text-white">
             {status === "idle" && (
-              <p className="font-display text-lg font-semibold">Eet alle vissen en kwallen op — pas op voor de octopussen!</p>
+              <p className="font-display text-lg font-semibold">
+                Eet alle vissen en kwallen op — een kwal geeft je even superkracht om de
+                octopussen te verslaan!
+              </p>
             )}
             {status === "gewonnen" && (
               <p className="font-display text-lg font-semibold">🎉 Gewonnen! Score: {score}</p>
