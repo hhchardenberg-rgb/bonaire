@@ -11,6 +11,13 @@ const BEESTJES = [
   "/easter-egg/beestje-5.webp",
   "/easter-egg/beestje-6.webp",
   "/easter-egg/beestje-7.webp",
+  "/easter-egg/beestje-8.webp",
+  "/easter-egg/beestje-9.webp",
+  "/easter-egg/beestje-10.webp",
+  "/easter-egg/beestje-11.webp",
+  "/easter-egg/beestje-12.webp",
+  "/easter-egg/beestje-13.webp",
+  "/easter-egg/beestje-14.webp",
 ];
 
 const AANTAL_DANSERS = BEESTJES.length + 1; // +1 voor het koraalbeestje
