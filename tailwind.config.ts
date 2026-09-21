@@ -106,13 +106,6 @@ const config: Config = {
           "8%": { opacity: "1" },
           "100%": { transform: "translateY(110vh) rotate(360deg)", opacity: "1" },
         },
-        "schud": {
-          "0%, 100%": { transform: "translateX(0)" },
-          "20%": { transform: "translateX(-6px)" },
-          "40%": { transform: "translateX(5px)" },
-          "60%": { transform: "translateX(-4px)" },
-          "80%": { transform: "translateX(3px)" },
-        },
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-out both",
@@ -121,7 +114,6 @@ const config: Config = {
         "shimmer": "shimmer 2.5s linear infinite",
         "dance": "dance 0.9s ease-in-out infinite",
         "flesjes-regen": "flesjes-regen linear infinite",
-        "schud": "schud 0.4s ease-in-out",
       },
     },
   },
