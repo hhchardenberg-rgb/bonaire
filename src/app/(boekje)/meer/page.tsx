@@ -20,7 +20,7 @@ const secties = [
       { href: "/meer/fun/duiven", label: "Remco's Duivenspel", emoji: "🐦", omschrijving: "Vang broodkruimels, ontwijk kat, bal en bezem" },
       { href: "/meer/fun/konijnen", label: "Charella’s Konijnenhok", emoji: "🐰", omschrijving: "Tik de konijnen weg, mis de vos — 30 seconden" },
       { href: "/meer/fun/misdaad", label: "Jermaine’s Misdaadspel", emoji: "🕵️", omschrijving: "Spot de boef tussen de burgers, voor de tijd om is" },
-      { href: "/meer/fun/bugbash", label: "Bart's Bug Bash", emoji: "🐛", omschrijving: "Tik de bugs weg voor de server crasht" },
+      { href: "/meer/fun/firewall", label: "Bart's Firewall Invaders", emoji: "👾", omschrijving: "Space Invaders in ICT-stijl: houd de bugs buiten de deur" },
       { href: "/meer/fun/bingo", label: "Vakantie-bingo", emoji: "🎉", omschrijving: "Vink af wat je tegenkomt" },
       { href: "/meer/fun/quiz", label: "Bonaire-quiz", emoji: "🧠", omschrijving: "Test je eilandkennis" },
       { href: "/meer/fun/bucketlist", label: "Bucketlist", emoji: "📋", omschrijving: "Dingen die we samen willen doen" },

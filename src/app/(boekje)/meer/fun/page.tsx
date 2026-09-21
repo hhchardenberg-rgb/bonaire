@@ -10,7 +10,7 @@ const items = [
   { href: "/meer/fun/duiven", label: "Remco's Duivenspel", emoji: "🐦" },
   { href: "/meer/fun/konijnen", label: "Charella’s Konijnenhok", emoji: "🐰" },
   { href: "/meer/fun/misdaad", label: "Jermaine’s Misdaadspel", emoji: "🕵️" },
-  { href: "/meer/fun/bugbash", label: "Bart's Bug Bash", emoji: "🐛" },
+  { href: "/meer/fun/firewall", label: "Bart's Firewall Invaders", emoji: "👾" },
   { href: "/meer/fun/bingo", label: "Vakantie-bingo", emoji: "🎉" },
   { href: "/meer/fun/quiz", label: "Bonaire-quiz", emoji: "🧠" },
   { href: "/meer/fun/bucketlist", label: "Bucketlist", emoji: "📋" },
