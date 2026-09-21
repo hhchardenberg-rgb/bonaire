@@ -13,12 +13,14 @@ const LEVENSDUUR_MAX = 1200;
 const SPAWN_MIN = 450;
 const SPAWN_MAX = 750;
 const VOS_KANS = 0.25;
+const MAX_VOSSEN = 3;
 
 export function KonijnenGame() {
   const [status, setStatus] = useState<"idle" | "spelen" | "afgelopen">("idle");
   const [score, setScore] = useState(0);
   const [hokjes, setHokjes] = useState<Hokje[]>(Array(AANTAL_HOKJES).fill("leeg"));
   const [resterendeTijd, setResterendeTijd] = useState(ROND_SECONDEN);
+  const [vossenGeraakt, setVossenGeraakt] = useState(0);
   const { waarde: hoogsteScore, bijwerken: setHoogsteScore } = useLocalStorage(
     "bonaire-konijnen-highscore",
     0
@@ -29,6 +31,7 @@ export function KonijnenGame() {
   const volgendeSpawnRef = useRef(0);
   const startTijdRef = useRef(0);
   const scoreRef = useRef(0);
+  const vossenRef = useRef(0);
   const statusRef = useRef(status);
 
   useEffect(() => {
@@ -45,8 +48,10 @@ export function KonijnenGame() {
     volgendeSpawnRef.current = Date.now() + 300;
     startTijdRef.current = Date.now();
     scoreRef.current = 0;
+    vossenRef.current = 0;
     setHokjes(Array(AANTAL_HOKJES).fill("leeg"));
     setScore(0);
+    setVossenGeraakt(0);
     setResterendeTijd(ROND_SECONDEN);
     setStatus("spelen");
   }, []);
@@ -115,6 +120,11 @@ export function KonijnenGame() {
       setScore((s) => s + 1);
     } else {
       setScore((s) => Math.max(0, s - 1));
+      vossenRef.current += 1;
+      setVossenGeraakt(vossenRef.current);
+      if (vossenRef.current >= MAX_VOSSEN) {
+        setStatus("afgelopen");
+      }
     }
   }, []);
 
@@ -135,7 +145,9 @@ export function KonijnenGame() {
       <div className="flex items-center justify-between text-sm">
         <span className="font-semibold text-diepblauw-800">Score: {score}</span>
         {status === "spelen" ? (
-          <span className="text-diepblauw-700/60">Tijd: {resterendeTijd}s</span>
+          <span className="text-diepblauw-700/60">
+            Tijd: {resterendeTijd}s · 🦊 {vossenGeraakt}/{MAX_VOSSEN}
+          </span>
         ) : (
           <span className="text-diepblauw-700/60">Hoogste: {hoogsteScore}</span>
         )}
@@ -164,10 +176,14 @@ export function KonijnenGame() {
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-diepblauw-900/80 p-4 text-center text-white">
             {status === "idle" && (
               <p className="font-display text-lg font-semibold">
-                🐰 Tik de konijnen weg voordat ze verdwijnen — mis de vos!
+                🐰 Tik de konijnen weg voordat ze verdwijnen — drie keer de vos geraakt en het is
+                game over!
               </p>
             )}
-            {status === "afgelopen" && (
+            {status === "afgelopen" && vossenGeraakt >= MAX_VOSSEN && (
+              <p className="font-display text-lg font-semibold">🦊 Drie keer de vos! Game over. Score: {score}</p>
+            )}
+            {status === "afgelopen" && vossenGeraakt < MAX_VOSSEN && (
               <p className="font-display text-lg font-semibold">⏰ Tijd om! Score: {score}</p>
             )}
             <button
@@ -182,7 +198,8 @@ export function KonijnenGame() {
       </div>
 
       <p className="text-center text-xs text-diepblauw-700/50">
-        Tik op een konijn zodra het verschijnt (of gebruik de cijfertoetsen 1-9). Dertig seconden de tijd!
+        Tik op een konijn zodra het verschijnt (of gebruik de cijfertoetsen 1-9). Dertig seconden
+        de tijd — maar drie keer de vos geraakt en het is meteen game over.
       </p>
     </div>
   );
