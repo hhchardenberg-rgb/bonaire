@@ -1,26 +1,9 @@
 "use client";
 
 import { useRef, useState } from "react";
-import type { CSSProperties } from "react";
 
 const AANTAL_FLESJES = 18;
-
-function Flesje({ className, style }: { className?: string; style?: CSSProperties }) {
-  return (
-    <svg viewBox="0 0 40 100" className={className} style={style} aria-hidden>
-      <rect x="16" y="2" width="8" height="8" rx="1.5" fill="#3a2a12" />
-      <path d="M15 10 h10 v10 l3 6 v4 h-16 v-4 l3 -6 z" fill="#f4d35e" />
-      <path
-        d="M9 30 q0 -4 4 -4 h14 q4 0 4 4 l3 8 q3 6 3 14 v34 q0 8 -8 8 h-18 q-8 0 -8 -8 v-34 q0 -8 3 -14 z"
-        fill="#f7e17d"
-        stroke="#d9a91f"
-        strokeWidth="1"
-      />
-      <rect x="6" y="58" width="28" height="22" fill="#f0803a" />
-      <rect x="6" y="58" width="28" height="4" fill="#ffffff" opacity="0.5" />
-    </svg>
-  );
-}
+const FLESJE_SRC = "/easter-egg/amstel-bright.webp";
 
 interface Regendruppel {
   left: number;
@@ -78,15 +61,18 @@ export function AmstelBrightEgg() {
         aria-pressed={regent}
         className="focus-ring flex h-12 w-12 items-center justify-center rounded-full bg-white/70 p-1.5 shadow-sm transition hover:bg-white"
       >
-        <Flesje className="h-full w-auto" />
+        <img src={FLESJE_SRC} alt="" aria-hidden className="h-full w-auto object-contain" />
       </button>
 
       {regent && (
         <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">
           {druppels.map((d, i) => (
-            <Flesje
+            <img
               key={i}
-              className="animate-flesjes-regen absolute top-0 drop-shadow-lg"
+              src={FLESJE_SRC}
+              alt=""
+              aria-hidden
+              className="animate-flesjes-regen absolute top-0 object-contain drop-shadow-lg"
               style={{
                 left: `${d.left}vw`,
                 width: `${d.breedte}px`,
