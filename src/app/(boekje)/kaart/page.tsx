@@ -24,11 +24,6 @@ export default function KaartPagina() {
         emoji="📍"
       />
 
-      <p className="rounded-xl2 bg-turquoise-50 p-3 text-sm text-diepblauw-800">
-        Geen ingebedde kaart hier — dat scheelt tracking en laadtijd. Tik op een plek om
-        &rsquo;m te openen in de kaart-app van je telefoon.
-      </p>
-
       <div className="space-y-6">
         {volgorde.map((type) => {
           const items = locaties.filter((l) => l.type === type);
