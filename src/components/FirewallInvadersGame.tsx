@@ -15,10 +15,11 @@ const PLAYER_Y = H - 34;
 const PLAYER_SPEED = 5;
 
 const BULLET_SPEED = 9;
-const ENEMY_BULLET_SPEED = 3.4;
-const FIRE_COOLDOWN_TICKS = Math.round(420 / TICK_MS);
-const INVUL_TICKS = Math.round(900 / TICK_MS);
+const ENEMY_BULLET_SPEED = 2.6;
+const FIRE_COOLDOWN_TICKS = Math.round(380 / TICK_MS);
+const INVUL_TICKS = Math.round(1300 / TICK_MS);
 const START_LEVENS = 3;
+const MAX_VIJAND_KOGELS = 2;
 
 const ROWS = 4;
 const COLS = 6;
@@ -28,9 +29,9 @@ const COL_SPACING = 44;
 const ROW_SPACING = 32;
 const START_X = 22;
 const START_Y = 36;
-const STEP_DOWN = 14;
-const BASE_ENEMY_SPEED = 0.9;
-const MAX_ENEMY_SPEED = 3.4;
+const STEP_DOWN = 12;
+const BASE_ENEMY_SPEED = 0.7;
+const MAX_ENEMY_SPEED = 2.6;
 const INVASIE_Y = PLAYER_Y - 24;
 
 const RIJ_EMOJI = ["👾", "🦠", "🦠", "🐛"];
@@ -241,15 +242,18 @@ export function FirewallInvadersGame() {
           formatieRef.current.x += richtingRef.current * speed;
         }
 
-        const fireChance = Math.min(0.02, 0.006 * golfRef.current);
-        for (let col = 0; col < COLS; col++) {
-          const kolomVijanden = alive.filter((v) => v.col === col);
-          if (kolomVijanden.length === 0) continue;
-          const schutter = kolomVijanden.reduce((laagste, v) => (v.row > laagste.row ? v : laagste));
-          if (Math.random() < fireChance) {
-            const px = START_X + schutter.col * COL_SPACING + formatieRef.current.x + ENEMY_W / 2;
-            const py = START_Y + schutter.row * ROW_SPACING + formatieRef.current.y + ENEMY_H;
-            vijandKogelsRef.current.push({ x: px, y: py });
+        const fireChance = Math.min(0.01, 0.0025 * golfRef.current);
+        if (vijandKogelsRef.current.length < MAX_VIJAND_KOGELS) {
+          for (let col = 0; col < COLS; col++) {
+            if (vijandKogelsRef.current.length >= MAX_VIJAND_KOGELS) break;
+            const kolomVijanden = alive.filter((v) => v.col === col);
+            if (kolomVijanden.length === 0) continue;
+            const schutter = kolomVijanden.reduce((laagste, v) => (v.row > laagste.row ? v : laagste));
+            if (Math.random() < fireChance) {
+              const px = START_X + schutter.col * COL_SPACING + formatieRef.current.x + ENEMY_W / 2;
+              const py = START_Y + schutter.row * ROW_SPACING + formatieRef.current.y + ENEMY_H;
+              vijandKogelsRef.current.push({ x: px, y: py });
+            }
           }
         }
       }
