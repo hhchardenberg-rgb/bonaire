@@ -133,4 +133,7 @@ export const scorebordCategorieen = [
   { id: "remco-roken", naam: "Remco loopt weg om te roken", emoji: "🚬" },
   { id: "over-werk", naam: "Iemand begint over werk", emoji: "💼" },
   { id: "bucket-amstel", naam: "Bucket Amstel Bright besteld", emoji: "🍺" },
+  { id: "ella-haai", naam: "Ella denkt dat ze een haai ziet", emoji: "🦈" },
+  { id: "charella-konijnen-mist", naam: "Charella zegt dat ze de konijnen mist", emoji: "🐰" },
+  { id: "bart-wachten", naam: "Bart moet wachten omdat iemand te laat is", emoji: "⏳" },
 ];
