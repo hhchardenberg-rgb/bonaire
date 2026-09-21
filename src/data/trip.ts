@@ -23,7 +23,7 @@ export const trip = {
   // Vul hier een link naar een gedeeld album (bv. Google Foto's of iCloud) in voor de fotomuur.
   fotoAlbumUrl: "https://photos.icloud.com/shared/album/0ffaWqP1RdLFknAyiE03Aj1Iw",
   // Digitale wegwerpcamera (Lense): iedereen maakt foto's, ze verschijnen later pas.
-  wegwerpcameraUrl: "https://lense.app/join-event/80557409f883f091-f9ecdf30",
+  wegwerpcameraUrl: "https://lense.app/join-event/69c6b8f91dde27fe-d5ff4285",
 } as const;
 
 export type Trip = typeof trip;
