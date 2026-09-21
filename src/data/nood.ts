@@ -5,7 +5,7 @@ export const noodnummers = [
 ];
 
 export const noodcontacten = [
-  { naam: "Dennis", rol: "Verhuurder vakantiehuis", telefoon: "+599 782 9691" },
+  { naam: "Dennis", rol: "Host vakantiehuis", telefoon: "+599 782 9691" },
   { naam: "AB Drive", rol: "Autoverhuurder", telefoon: "+599-717-8980" },
 ];
 

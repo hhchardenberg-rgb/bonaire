@@ -104,4 +104,9 @@ export const scorebordCategorieen = [
   { id: "snorkelplekken", naam: "Snorkelplekken", emoji: "🤿" },
   { id: "cocktails", naam: "Cocktails geproefd", emoji: "🍹" },
   { id: "zonsondergangen", naam: "Zonsondergangen gezien", emoji: "🌅" },
+  { id: "jermaine-urgent", naam: "Jermaine zegt urgent", emoji: "⏰" },
+  { id: "ezel-gezien", naam: "Ezel gezien", emoji: "🫏" },
+  { id: "remco-roken", naam: "Remco loopt weg om te roken", emoji: "🚬" },
+  { id: "over-werk", naam: "Iemand begint over werk", emoji: "💼" },
+  { id: "bucket-amstel", naam: "Bucket Amstel Bright besteld", emoji: "🍺" },
 ];

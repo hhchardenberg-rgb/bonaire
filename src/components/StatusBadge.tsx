@@ -5,6 +5,7 @@ const stijl: Record<ActiviteitStatus, string> = {
   gepland: "bg-zand-100 text-zand-800",
   bevestigd: "bg-turquoise-100 text-turquoise-800",
   afgerond: "bg-diepblauw-100 text-diepblauw-700 line-through decoration-2",
+  uit: "bg-zand-50 text-diepblauw-400 line-through decoration-2",
 };
 
 const label: Record<ActiviteitStatus, string> = {
@@ -12,6 +13,7 @@ const label: Record<ActiviteitStatus, string> = {
   gepland: "Gepland",
   bevestigd: "Bevestigd",
   afgerond: "Afgerond",
+  uit: "Staat uit",
 };
 
 export function StatusBadge({ status }: { status: ActiviteitStatus }) {

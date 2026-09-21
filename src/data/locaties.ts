@@ -17,18 +17,6 @@ export const locaties: Locatie[] = [
     kaartUrl: mapsUrl("Flamingo International Airport Bonaire"),
   },
   {
-    id: "it-rains-fishes",
-    naam: "It Rains Fishes",
-    type: "eten-drinken",
-    kaartUrl: mapsUrl("It Rains Fishes Bonaire"),
-  },
-  {
-    id: "zeezicht",
-    naam: "Zeezicht Restaurant",
-    type: "eten-drinken",
-    kaartUrl: mapsUrl("Zeezicht Restaurant Bonaire"),
-  },
-  {
     id: "te-amo-beach",
     naam: "Te Amo Beach",
     type: "strand",
@@ -39,6 +27,20 @@ export const locaties: Locatie[] = [
     naam: "Sorobon Beach",
     type: "strand",
     kaartUrl: mapsUrl("Sorobon Beach Bonaire"),
+  },
+  {
+    id: "bachelors-beach",
+    naam: "Bachelor's Beach",
+    type: "strand",
+    omschrijving: "Instapsnorkelen zo vanaf het strand.",
+    kaartUrl: mapsUrl("Bachelor's Beach Bonaire"),
+  },
+  {
+    id: "no-name-beach",
+    naam: "No Name Beach",
+    type: "strand",
+    omschrijving: "Op Klein Bonaire, per boot bereikbaar.",
+    kaartUrl: mapsUrl("No Name Beach Klein Bonaire"),
   },
   {
     id: "1000-steps",
@@ -52,6 +54,27 @@ export const locaties: Locatie[] = [
     naam: "Washington Slagbaai National Park",
     type: "activiteit",
     kaartUrl: mapsUrl("Washington Slagbaai National Park Bonaire"),
+  },
+  {
+    id: "klein-bonaire",
+    naam: "Klein Bonaire",
+    type: "activiteit",
+    omschrijving: "Onbewoond eilandje, alleen per boot bereikbaar.",
+    kaartUrl: mapsUrl("Klein Bonaire"),
+  },
+  {
+    id: "donkey-sanctuary",
+    naam: "Donkey Sanctuary",
+    type: "activiteit",
+    omschrijving: "Opvang voor ezels, rustig ritje tussen de dieren door.",
+    kaartUrl: mapsUrl("Donkey Sanctuary Bonaire"),
+  },
+  {
+    id: "mangrove-center",
+    naam: "Mangrove Center",
+    type: "activiteit",
+    omschrijving: "Begeleide kajaktochten door de mangroves bij Lac Bay.",
+    kaartUrl: mapsUrl("Mangrove Center Bonaire"),
   },
   {
     id: "van-den-tweel",
@@ -90,12 +113,17 @@ export const locaties: Locatie[] = [
     type: "bezienswaardigheid",
     kaartUrl: mapsUrl("Willemstoren Lighthouse Bonaire"),
   },
+  {
+    id: "slavenhutjes",
+    naam: "Slavenhutjes bij de zoutpannen",
+    type: "bezienswaardigheid",
+    kaartUrl: mapsUrl("Slave Huts Bonaire"),
+  },
 ];
 
 export const locatieTypeLabels: Record<Locatie["type"], { label: string; emoji: string }> = {
   accommodatie: { label: "Accommodatie", emoji: "🏠" },
   luchthaven: { label: "Luchthaven", emoji: "✈️" },
-  "eten-drinken": { label: "Eten & drinken", emoji: "🍽️" },
   strand: { label: "Stranden", emoji: "🏖️" },
   activiteit: { label: "Activiteiten", emoji: "🤿" },
   boodschappen: { label: "Boodschappen", emoji: "🛒" },

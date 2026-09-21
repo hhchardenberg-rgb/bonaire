@@ -11,7 +11,7 @@ export default function NoodPagina() {
 
   return (
     <div className="space-y-6">
-      <PageHeader titel="Nood & hulp" ondertitel="Sober overzicht voor als het nodig is" emoji="🆘" />
+      <PageHeader titel="Nood & hulp" emoji="🆘" />
 
       <section className="rounded-xl2 border-2 border-koraal-300 bg-koraal-50 p-4">
         <h2 className="font-display text-sm font-semibold text-koraal-800">Noodnummers</h2>

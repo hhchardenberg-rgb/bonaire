@@ -26,8 +26,9 @@ export default function VandaagPagina() {
 
       {fase === "voor" && (
         <p className="rounded-xl2 bg-zon-100 p-3 text-sm text-zon-900">
-          Nog {dagenTussen(vandaag, trip.startDatum)} dagen tot vertrek. Hier vast een voorproefje
-          van dag 1 van de trip.
+          Nog {dagenTussen(vandaag, trip.startDatum)}{" "}
+          {dagenTussen(vandaag, trip.startDatum) === 1 ? "dag" : "dagen"} tot vertrek. Hier vast een
+          voorproefje van dag 1 van de trip.
         </p>
       )}
       {fase === "na" && (

@@ -10,18 +10,20 @@ export const trip = {
   tijdzone: "AST (UTC-4, geen zomertijd op Bonaire)",
   bestemming: "Kralendijk, Bonaire",
   welkomstTekst:
-    "Nog een paar nachtjes slapen! Alles wat je nodig hebt voor de trip staat hier: het programma, de gids, de kaart en praktische zaken. Voeg deze pagina toe aan je beginscherm, dan heb je 'm altijd bij de hand.",
+    "Alles wat je nodig hebt voor de trip staat hier: het programma, de gids, de kaart en praktische zaken. Voeg deze pagina toe aan je beginscherm, dan heb je 'm altijd bij de hand.",
   accommodatie: {
     naam: "Kas den Daas",
     adres: "4P95+X94, Kralendijk, Caribisch Nederland",
     checkIn: "vanaf 15:00",
     checkOut: "voor 11:00",
     wifi: "Wachtwoord: beachhousebonaire",
-    contact: "Verhuurder: Dennis — +599 782 9691",
+    contact: "Host: Dennis — +599 782 9691",
     kaartUrl: mapsUrl("4P95+X94 Kralendijk Bonaire"),
   },
   // Vul hier een link naar een gedeeld album (bv. Google Foto's of iCloud) in voor de fotomuur.
   fotoAlbumUrl: "https://photos.icloud.com/shared/album/0ffaWqP1RdLFknAyiE03Aj1Iw",
+  // Digitale wegwerpcamera (Lense): iedereen maakt foto's, ze verschijnen later pas.
+  wegwerpcameraUrl: "https://lense.app/join-event/80557409f883f091-f9ecdf30",
 } as const;
 
 export type Trip = typeof trip;

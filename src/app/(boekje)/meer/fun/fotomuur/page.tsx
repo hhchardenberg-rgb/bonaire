@@ -61,6 +61,21 @@ export default function FotomuurPagina() {
         )}
       </div>
 
+      <div className="rounded-xl2 bg-white p-4 shadow-card">
+        <h2 className="font-display text-sm font-semibold text-diepblauw-800">Digitale wegwerpcamera</h2>
+        <p className="mt-1 text-sm text-diepblauw-700/70">
+          Maak foto&apos;s met de wegwerpcamera van de groep en bekijk ze later pas terug.
+        </p>
+        <a
+          href={trip.wegwerpcameraUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="focus-ring mt-2 inline-flex items-center gap-1.5 rounded-full bg-diepblauw-700 px-3.5 py-2 text-sm font-medium text-white hover:bg-diepblauw-800"
+        >
+          Open de wegwerpcamera
+        </a>
+      </div>
+
       <div>
         <h2 className="mb-2 font-display text-sm font-semibold text-diepblauw-700">Herinneringen</h2>
         <form

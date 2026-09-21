@@ -1,4 +1,4 @@
-export type ActiviteitStatus = "optie" | "gepland" | "bevestigd" | "afgerond";
+export type ActiviteitStatus = "optie" | "gepland" | "bevestigd" | "afgerond" | "uit";
 
 export interface Activiteit {
   id: string;
@@ -54,7 +54,6 @@ export interface GidsItem {
 export type LocatieType =
   | "accommodatie"
   | "luchthaven"
-  | "eten-drinken"
   | "strand"
   | "activiteit"
   | "boodschappen"

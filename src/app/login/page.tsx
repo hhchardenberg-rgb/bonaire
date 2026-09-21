@@ -57,10 +57,6 @@ export default function LoginPage({
             Open het boekje
           </button>
         </form>
-
-        <p className="mt-5 text-center text-xs text-diepblauw-700/50">
-          Deze site is privé en niet zichtbaar in zoekmachines.
-        </p>
       </div>
     </main>
   );

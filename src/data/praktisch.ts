@@ -41,7 +41,7 @@ export const praktischeInfo: PraktischSectie[] = [
       { label: "Check-in", tekst: "Vanaf 15:00" },
       { label: "Check-out", tekst: "Voor 11:00" },
       { label: "Wifi", tekst: "Wachtwoord: beachhousebonaire" },
-      { label: "Verhuurder", tekst: "Dennis — +599 782 9691" },
+      { label: "Host", tekst: "Dennis — +599 782 9691" },
     ],
   },
   {
@@ -110,7 +110,7 @@ export const praktischeInfo: PraktischSectie[] = [
       { label: "Alarmnummer (politie, brandweer, ambulance)", tekst: "911", telefoon: "911" },
       { label: "Kustwacht Caribisch Gebied", tekst: "913", telefoon: "913" },
       { label: "Mariadal Ziekenhuis", tekst: "+599 715 8900", telefoon: "+599 715 8900" },
-      { label: "Verhuurder accommodatie (Dennis)", tekst: "+599 782 9691", telefoon: "+599 782 9691" },
+      { label: "Host vakantiehuis (Dennis)", tekst: "+599 782 9691", telefoon: "+599 782 9691" },
       { label: "Autoverhuurder (AB Drive)", tekst: "+599-717-8980", telefoon: "+599-717-8980" },
     ],
   },

@@ -8,7 +8,6 @@ export const metadata = { title: "Kaart" };
 const volgorde: LocatieType[] = [
   "accommodatie",
   "luchthaven",
-  "eten-drinken",
   "strand",
   "activiteit",
   "boodschappen",

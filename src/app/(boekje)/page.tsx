@@ -57,6 +57,34 @@ export default function WelkomstPagina() {
       </div>
 
       <div>
+        <h2 className="mb-2 font-display text-sm font-semibold text-diepblauw-700">Foto&apos;s delen</h2>
+        <div className="grid grid-cols-2 gap-2.5">
+          <a
+            href={trip.wegwerpcameraUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring flex flex-col items-center gap-1 rounded-xl2 bg-white p-3 text-center shadow-card transition hover:-translate-y-0.5 hover:shadow-floating"
+          >
+            <span className="text-2xl" aria-hidden>
+              📸
+            </span>
+            <span className="text-xs font-medium text-diepblauw-800">Wegwerpcamera</span>
+          </a>
+          <a
+            href={trip.fotoAlbumUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring flex flex-col items-center gap-1 rounded-xl2 bg-white p-3 text-center shadow-card transition hover:-translate-y-0.5 hover:shadow-floating"
+          >
+            <span className="text-2xl" aria-hidden>
+              🖼️
+            </span>
+            <span className="text-xs font-medium text-diepblauw-800">Fotoalbum</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
         <h2 className="mb-2 font-display text-sm font-semibold text-diepblauw-700">Weer & dagtip</h2>
         <WeerEnTip />
       </div>
