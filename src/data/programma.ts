@@ -129,6 +129,17 @@ export const programma: Dagprogramma[] = [
         fotoEmoji: "🌮",
         status: "bevestigd",
       },
+      {
+        id: "vrijmibo-ocean-oasis",
+        titel: "VrijMiBo Beach Party",
+        datum: "2026-09-25",
+        tijd: "17:00",
+        locatie: "Ocean Oasis Beach Club",
+        omschrijving: "VrijMiBo Beach Party bij Ocean Oasis Beach Club.",
+        kaartUrl: mapsUrl("Ocean Oasis Beach Club Bonaire"),
+        fotoEmoji: "🏖️",
+        status: "optie",
+      },
     ],
   },
   {
