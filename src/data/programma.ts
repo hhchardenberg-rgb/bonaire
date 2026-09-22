@@ -175,6 +175,18 @@ export const programma: Dagprogramma[] = [
         fotoEmoji: "⛵",
         status: "uit",
       },
+      {
+        id: "beachparty-hangout",
+        titel: "Beachparty",
+        datum: "2026-09-27",
+        tijd: "15:00",
+        eindtijd: "21:00",
+        locatie: "Hang Out Beach Bar",
+        omschrijving: "Beachparty bij Hang Out Beach Bar.",
+        kaartUrl: mapsUrl("Hang Out Beach Bar Bonaire"),
+        fotoEmoji: "🎉",
+        status: "gepland",
+      },
     ],
   },
   {
