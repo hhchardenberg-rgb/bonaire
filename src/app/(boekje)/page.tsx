@@ -4,6 +4,7 @@ import { Countdown } from "@/components/Countdown";
 import { WeerEnTip } from "@/components/WeerEnTip";
 import { DansendeBeestjes } from "@/components/DansendeBeestjes";
 import { AmstelBrightEgg } from "@/components/AmstelBrightEgg";
+import { FoodtruckTourBanner } from "@/components/FoodtruckTourBanner";
 import { trip } from "@/data/trip";
 import { formatDatumLang } from "@/lib/date";
 
@@ -19,6 +20,8 @@ const snelknoppen = [
 export default function WelkomstPagina() {
   return (
     <div className="space-y-6">
+      <FoodtruckTourBanner />
+
       <div className="relative -mx-4 -mt-4">
         <HeroIllustration />
         <DansendeBeestjes />
