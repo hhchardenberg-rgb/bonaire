@@ -29,11 +29,7 @@ export function Countdown({ doelIso, label }: { doelIso: string; label: string }
   }, [doelIso]);
 
   if (rest?.klaar) {
-    return (
-      <p className="text-center text-lg font-semibold text-koraal-600">
-        We zijn onderweg — of al aangekomen! 🌴
-      </p>
-    );
+    return null;
   }
 
   const blokken = rest
@@ -46,7 +42,7 @@ export function Countdown({ doelIso, label }: { doelIso: string; label: string }
     : LABELS.map((l) => ({ waarde: "–" as const, label: l }));
 
   return (
-    <div>
+    <div className="rounded-xl2 bg-white p-4 shadow-card">
       <p className="mb-2 text-center text-xs font-medium uppercase tracking-wide text-diepblauw-700/60">
         {label}
       </p>
