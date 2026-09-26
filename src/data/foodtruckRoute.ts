@@ -179,8 +179,11 @@ export const foodtruckTip =
 export const foodtruckAfvallers = [
   { naam: "El Food Truck Jasmin", reden: "staat momenteel als permanent gesloten" },
   { naam: "Cactus Blue", reden: "staat tijdelijk gesloten" },
-  { naam: "Holy Smoke", reden: "alleen open op donderdag, zaterdag en zondag — niet op vrijdag" },
+  { naam: "Holy Smoke", reden: "alleen open op donderdag, zaterdag en zondag" },
 ];
 
 export const foodtruckDisclaimer =
-  "Controleer vrijdagmiddag welke foodtrucks echt open zijn — openingstijden van foodtrucks wisselen weleens.";
+  "Controleer van tevoren welke foodtrucks echt open zijn — openingstijden van foodtrucks wisselen weleens.";
+
+export const foodtruckVoorbeeldBasis =
+  "Dit voorbeeld is gebaseerd op een bezoek op vrijdag, met de toen geldende openingstijden. Op een andere dag kunnen andere foodtrucks open of juist gesloten zijn.";

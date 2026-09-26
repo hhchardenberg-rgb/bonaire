@@ -8,6 +8,7 @@ import {
   foodtruckTip,
   foodtruckAfvallers,
   foodtruckDisclaimer,
+  foodtruckVoorbeeldBasis,
 } from "@/data/foodtruckRoute";
 import type { FoodtruckStopType } from "@/data/foodtruckRoute";
 
@@ -35,7 +36,7 @@ export default function FoodtruckTourPagina() {
       <BackLink href="/" label="Home" />
       <PageHeader
         titel="🌴 De foodtrucktour"
-        ondertitel="Vrijdag vanaf 15:00 — een route met keuzemomenten, geen rigide lijst"
+        ondertitel="Vanaf 15:00 — een route met keuzemomenten, geen rigide lijst"
         emoji="🌮"
       />
 
@@ -128,6 +129,8 @@ export default function FoodtruckTourPagina() {
       <p className="rounded-xl2 bg-koraal-50 p-3 text-center text-xs font-medium text-koraal-700">
         ⚠️ {foodtruckDisclaimer}
       </p>
+
+      <p className="text-center text-xs text-diepblauw-700/50">{foodtruckVoorbeeldBasis}</p>
     </div>
   );
 }
