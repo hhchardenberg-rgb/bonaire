@@ -4,6 +4,7 @@ export const trip = {
   titel: "Bonaire 2026",
   startDatum: "2026-09-22", // aankomst (heenvlucht OR393, 08:15 uur)
   vertrekMoment: "2026-09-22T08:15:00", // exacte vertrektijd voor de countdown
+  ostracodMoment: "2026-09-29T18:30:00", // aanwezig-tijd voor de Ostracod Night-countdown
   // De groep vertrekt in etappes: Charella & Bart op 30 sept, Ella op 2 okt,
   // Remco & Jermaine (de laatsten) op 3 okt. eindDatum = laatste vertrekdag.
   eindDatum: "2026-10-03",

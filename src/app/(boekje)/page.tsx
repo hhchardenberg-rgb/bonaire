@@ -4,6 +4,7 @@ import { Countdown } from "@/components/Countdown";
 import { WeerEnTip } from "@/components/WeerEnTip";
 import { DansendeBeestjes } from "@/components/DansendeBeestjes";
 import { AmstelBrightEgg } from "@/components/AmstelBrightEgg";
+import { OstracodCountdown } from "@/components/OstracodCountdown";
 import { trip } from "@/data/trip";
 import { formatDatumLang } from "@/lib/date";
 
@@ -34,6 +35,8 @@ export default function WelkomstPagina() {
       <div className="rounded-xl2 bg-white p-4 shadow-card">
         <Countdown doelIso={trip.vertrekMoment} label="Nog tot vertrek" />
       </div>
+
+      <OstracodCountdown doelIso={trip.ostracodMoment} />
 
       <p className="rounded-xl2 bg-turquoise-50 p-4 text-sm leading-relaxed text-diepblauw-800">
         {trip.welkomstTekst}
