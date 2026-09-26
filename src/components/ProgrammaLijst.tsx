@@ -50,17 +50,15 @@ export function ProgrammaLijst({ programma }: { programma: Dagprogramma[] }) {
               </span>
               <div className="min-w-0 flex-1">
                 <h2 className="font-display text-base font-semibold text-diepblauw-800">
-                  {dag.titel ?? "Programma"}
-                </h2>
-                <p className="text-xs text-diepblauw-700/60">
                   {formatDatumLang(dag.dag)}
                   {isVerleden && !open && (
-                    <span className="ml-1.5 text-diepblauw-700/40">
+                    <span className="ml-1.5 text-sm font-normal text-diepblauw-700/40">
                       · {dag.activiteiten.length}{" "}
                       {dag.activiteiten.length === 1 ? "activiteit" : "activiteiten"}
                     </span>
                   )}
-                </p>
+                </h2>
+                {dag.titel && <p className="text-xs text-diepblauw-700/60">{dag.titel}</p>}
               </div>
               {isVerleden && (
                 <span
