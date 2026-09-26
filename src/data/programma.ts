@@ -279,6 +279,18 @@ export const programma: Dagprogramma[] = [
     titel: "Charella & Bart vliegen naar Miami",
     activiteiten: [
       {
+        id: "ostracod-night-optie-30",
+        titel: "Ostracod Night — Nachtsnorkelen (optie)",
+        datum: "2026-09-30",
+        tijd: "18:30",
+        omschrijving:
+          "Reserveoptie voor als Ostracod Night op 29 september niet doorging. Zelfde plan: aanwezig om 18:30, de lichtshow begint zelf rond 19:09.",
+        infoUrl: "/ostracod-night",
+        infoLabel: "Uitleg, visualisatie en tips bekijken",
+        fotoEmoji: "✨",
+        status: "optie",
+      },
+      {
         id: "inpakken-charella-bart",
         titel: "Charella & Bart pakken koffers",
         datum: "2026-09-30",
@@ -313,6 +325,18 @@ export const programma: Dagprogramma[] = [
         tijd: "hele dag",
         omschrijving: "Ella, Remco en Jermaine hebben nog een paar dagen — geen vast programma.",
         fotoEmoji: "🌴",
+        status: "optie",
+      },
+      {
+        id: "ostracod-night-optie-1okt",
+        titel: "Ostracod Night — Nachtsnorkelen (optie)",
+        datum: "2026-10-01",
+        tijd: "18:30",
+        omschrijving:
+          "Nog een reserveoptie voor Ostracod Night, mocht het op 29 en 30 september niet gelukt zijn. Aanwezig om 18:30, de lichtshow begint zelf rond 19:09.",
+        infoUrl: "/ostracod-night",
+        infoLabel: "Uitleg, visualisatie en tips bekijken",
+        fotoEmoji: "✨",
         status: "optie",
       },
       {

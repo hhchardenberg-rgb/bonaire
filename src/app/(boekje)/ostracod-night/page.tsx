@@ -5,20 +5,32 @@ import { OstracodDiagram } from "@/components/OstracodDiagram";
 
 export const metadata = { title: "Ostracod Night" };
 
+const ostracodPakLijst = [
+  { emoji: "🔦", naam: "Hoofdlamp", toelichting: "voor in- en uitstap" },
+  { emoji: "🔋", naam: "Reservelamp", toelichting: "back-up, zeker voor duikers" },
+  { emoji: "🥽", naam: "Snorkelset", toelichting: "masker + snorkel" },
+  { emoji: "🩱", naam: "Zwemkleding", toelichting: "aan onder je kleren" },
+  { emoji: "🧥", naam: "Droog jasje", toelichting: "avondlucht kan fris zijn" },
+  { emoji: "🧴", naam: "Handdoek" },
+  { emoji: "🦟", naam: "Muggenspray" },
+  { emoji: "💧", naam: "Drinkwater", toelichting: "voor na afloop" },
+];
+
 export default function OstracodNightPagina() {
   return (
     <div className="space-y-6">
       <BackLink href="/programma" label="Programma" />
       <PageHeader
         titel="✨ Ostracod Night"
-        ondertitel="Nachtsnorkelen — maandag 29 september, 18:30 aanwezig"
+        ondertitel="Nachtsnorkelen — 18:30 aanwezig, de lichtshow begint zelf rond 19:09"
         emoji="🌙"
       />
 
       <div className="flex items-center gap-2">
         <StatusBadge status="bevestigd" />
         <span className="text-sm text-diepblauw-700/70">
-          Aanwezig om 18:30 · de lichtshow begint zelf rond 19:09
+          Gepland op 29 september — 30 september en 1 oktober staan als reserveopties in het
+          programma, mocht het de eerste keer niet doorgaan.
         </span>
       </div>
 
@@ -38,6 +50,30 @@ export default function OstracodNightPagina() {
           Zo ziet het eruit
         </h2>
         <OstracodDiagram />
+      </div>
+
+      <div>
+        <h2 className="mb-3 font-display text-sm font-semibold text-diepblauw-700">
+          Wat neem je mee?
+        </h2>
+        <ul className="grid grid-cols-2 gap-2.5">
+          {ostracodPakLijst.map((item) => (
+            <li
+              key={item.naam}
+              className="rounded-xl2 bg-white p-3 text-center shadow-card"
+            >
+              <span className="block text-2xl" aria-hidden>
+                {item.emoji}
+              </span>
+              <span className="mt-1 block text-xs font-medium text-diepblauw-800">{item.naam}</span>
+              {item.toelichting && (
+                <span className="mt-0.5 block text-[11px] text-diepblauw-700/60">
+                  {item.toelichting}
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div>

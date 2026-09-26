@@ -1,6 +1,13 @@
 // Simpele service worker voor optionele PWA-installatie en offline toegang tot
 // eerder bezochte pagina's. Geen tracking, geen externe requests.
-const CACHE_NAAM = "bonaire-boekje-v2";
+//
+// Alles gaat network-first: eerst een verse fetch proberen en die
+// cachen, en alleen bij een mislukte fetch (bv. offline) terugvallen op de
+// cache. Dit voorkomt dat client-side navigatie (Next.js RSC-payloads,
+// scripts) blijft hangen op een oude gecachte versie na een nieuwe deploy —
+// dat gaf eerder het probleem dat nieuwe voorpagina-content niet verscheen
+// als je terugnavigeerde binnen de app.
+const CACHE_NAAM = "bonaire-boekje-v3";
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
@@ -24,28 +31,13 @@ self.addEventListener("fetch", (event) => {
   // Nooit auth-routes of de login-pagina cachen.
   if (url.pathname.startsWith("/api/")) return;
 
-  if (request.mode === "navigate") {
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          const kopie = response.clone();
-          caches.open(CACHE_NAAM).then((cache) => cache.put(request, kopie));
-          return response;
-        })
-        .catch(() => caches.match(request).then((r) => r || caches.match("/")))
-    );
-    return;
-  }
-
   event.respondWith(
-    caches.match(request).then(
-      (gecached) =>
-        gecached ||
-        fetch(request).then((response) => {
-          const kopie = response.clone();
-          caches.open(CACHE_NAAM).then((cache) => cache.put(request, kopie));
-          return response;
-        })
-    )
+    fetch(request)
+      .then((response) => {
+        const kopie = response.clone();
+        caches.open(CACHE_NAAM).then((cache) => cache.put(request, kopie));
+        return response;
+      })
+      .catch(() => caches.match(request).then((r) => r || caches.match("/")))
   );
 });
