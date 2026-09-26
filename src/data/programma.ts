@@ -1,7 +1,19 @@
 import type { Dagprogramma } from "@/types";
 import { mapsUrl } from "@/lib/maps";
 
-export const programma: Dagprogramma[] = [
+// Zet een `tijd`-waarde om in minuten sinds middernacht, zodat activiteiten
+// per dag chronologisch gesorteerd kunnen worden. Vangt ook de paar
+// niet-standaard tijdsaanduidingen in dit programma af.
+function tijdInMinuten(tijd?: string): number {
+  if (!tijd) return Infinity;
+  if (tijd === "hele dag") return -1;
+  const match = tijd.match(/(\d{1,2}):(\d{2})/);
+  if (match) return Number(match[1]) * 60 + Number(match[2]);
+  if (tijd.includes("aankomst")) return 13 * 60; // kort na de vlucht van 12:45
+  return Infinity;
+}
+
+const ruwProgramma: Dagprogramma[] = [
   {
     dag: "2026-09-22",
     titel: "Aankomstdag",
@@ -277,9 +289,8 @@ export const programma: Dagprogramma[] = [
         titel: "Afscheidsdiner",
         datum: "2026-09-29",
         tijd: "20:00",
-        locatie: "Zeezicht Restaurant",
-        omschrijving: "Laatste gezamenlijke diner van de trip.",
-        kaartUrl: mapsUrl("Zeezicht Restaurant Bonaire"),
+        locatie: "Nog onbekend",
+        omschrijving: "Laatste gezamenlijke diner van de trip. Locatie moet nog worden gekozen.",
         fotoEmoji: "🥂",
         status: "optie",
       },
@@ -412,6 +423,11 @@ export const programma: Dagprogramma[] = [
     ],
   },
 ];
+
+export const programma: Dagprogramma[] = ruwProgramma.map((dag) => ({
+  ...dag,
+  activiteiten: [...dag.activiteiten].sort((a, b) => tijdInMinuten(a.tijd) - tijdInMinuten(b.tijd)),
+}));
 
 export function getDagprogramma(datum: string): Dagprogramma | undefined {
   return programma.find((d) => d.dag === datum);
