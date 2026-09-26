@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { Activiteit } from "@/types";
 import { StatusBadge } from "./StatusBadge";
 import { MapLinkButton } from "./MapLinkButton";
@@ -16,7 +17,11 @@ export function ActivityCard({
 }) {
   const [open, setOpen] = useState(false);
   const heeftDetails = Boolean(
-    activiteit.omschrijving || activiteit.praktisch || activiteit.contact || activiteit.kaartUrl
+    activiteit.omschrijving ||
+      activiteit.praktisch ||
+      activiteit.contact ||
+      activiteit.kaartUrl ||
+      activiteit.infoUrl
   );
 
   return (
@@ -83,6 +88,16 @@ export function ActivityCard({
               {activiteit.kaartUrl && (
                 <div className="pt-1">
                   <MapLinkButton url={activiteit.kaartUrl} />
+                </div>
+              )}
+              {activiteit.infoUrl && (
+                <div className="pt-1">
+                  <Link
+                    href={activiteit.infoUrl}
+                    className="focus-ring inline-block text-sm font-semibold text-turquoise-700 underline"
+                  >
+                    {activiteit.infoLabel ?? "Meer uitleg bekijken"} →
+                  </Link>
                 </div>
               )}
             </div>

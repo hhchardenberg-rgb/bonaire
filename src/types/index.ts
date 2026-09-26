@@ -11,6 +11,8 @@ export interface Activiteit {
   praktisch?: string;
   contact?: string;
   kaartUrl?: string;
+  infoUrl?: string; // link naar een aparte pagina met uitgebreide uitleg
+  infoLabel?: string;
   fotoEmoji?: string; // lichte visuele indicatie i.p.v. echte foto
   status: ActiviteitStatus;
 }

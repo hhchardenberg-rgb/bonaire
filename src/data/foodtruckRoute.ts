@@ -1,6 +1,4 @@
-// Route voor het Jella & Co Foodtruck Festival, alleen relevant op deze ene dag.
-export const foodtruckTourDatum = "2026-09-25";
-
+// Route voor het Jella & Co Foodtruck Festival.
 export type FoodtruckStopType = "kern" | "optioneel" | "tijdkritisch" | "reserve" | "laat";
 
 export interface FoodtruckStop {

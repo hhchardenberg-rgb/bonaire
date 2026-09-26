@@ -245,6 +245,20 @@ export const programma: Dagprogramma[] = [
         status: "optie",
       },
       {
+        id: "ostracod-night",
+        titel: "Ostracod Night — Nachtsnorkelen",
+        datum: "2026-09-29",
+        tijd: "18:30",
+        omschrijving:
+          "Nachtsnorkeltocht om de bioluminescente lichtshow van ostracoden te zien: piepkleine schaaldiertjes die 's nachts korte lichtsignalen afgeven om een partner aan te trekken, boven ondiepe, structuurrijke riffen. Om 18:30 aanwezig zijn, de lichtshow begint zelf rond 19:09 zodra het donker genoeg is.",
+        praktisch:
+          "Neem een lamp mee, maar gebruik 'm bewust: alleen voor een veilige in- en uitstap en oriëntatie, en volgens de afspraken met de gids uit tijdens het kijken. Kijk naar kleine lichtpuntjes en korte lichtsnoertjes boven het rif — dat is iets anders dan opflitsend plankton, dus niet gaan zwaaien of het water opwoelen. Geef je ogen rust: geen telefoon, camera of felle lamp — het went, en de zwakke flitsjes worden beter zichtbaar naarmate je ogen aan het donker wennen.",
+        infoUrl: "/ostracod-night",
+        infoLabel: "Uitleg, visualisatie en tips bekijken",
+        fotoEmoji: "✨",
+        status: "bevestigd",
+      },
+      {
         id: "afscheidsdiner",
         titel: "Afscheidsdiner",
         datum: "2026-09-29",

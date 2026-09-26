@@ -9,6 +9,7 @@ const secties = [
     items: [
       { href: "/meer/praktisch", label: "Praktische informatie", emoji: "🧳", omschrijving: "Vlucht, accommodatie, geld, tijdverschil en meer" },
       { href: "/meer/paklijst", label: "Paklijst", emoji: "✅", omschrijving: "Vink af wat al in de koffer zit" },
+      { href: "/foodtruck-tour", label: "Foodtruckroute", emoji: "🌮", omschrijving: "De route langs de foodtrucks — grijp 'm erbij wanneer het uitkomt" },
       { href: "/nood", label: "Nood & hulp", emoji: "🆘", omschrijving: "Noodnummers en belangrijke contacten" },
     ],
   },
