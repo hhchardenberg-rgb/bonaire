@@ -10,6 +10,7 @@ const secties = [
       { href: "/meer/praktisch", label: "Praktische informatie", emoji: "🧳", omschrijving: "Vlucht, accommodatie, geld, tijdverschil en meer" },
       { href: "/meer/paklijst", label: "Paklijst", emoji: "✅", omschrijving: "Vink af wat al in de koffer zit" },
       { href: "/foodtruck-tour", label: "Foodtruckroute", emoji: "🌮", omschrijving: "De route langs de foodtrucks — grijp 'm erbij wanneer het uitkomt" },
+      { href: "/foodtruck-cadushy-ostracods", label: "Foodtruck tour, Cadushy & Ostracods", emoji: "🌵", omschrijving: "Pita Madre, Yhanni's, Cadushy, Stoked en de ostracods" },
       { href: "/nood", label: "Nood & hulp", emoji: "🆘", omschrijving: "Noodnummers en belangrijke contacten" },
     ],
   },

@@ -5,6 +5,7 @@ import { WeerEnTip } from "@/components/WeerEnTip";
 import { DansendeBeestjes } from "@/components/DansendeBeestjes";
 import { AmstelBrightEgg } from "@/components/AmstelBrightEgg";
 import { OstracodCountdown } from "@/components/OstracodCountdown";
+import { CadushyTourBanner } from "@/components/CadushyTourBanner";
 import { trip } from "@/data/trip";
 import { formatDatumLang } from "@/lib/date";
 
@@ -20,6 +21,8 @@ const snelknoppen = [
 export default function WelkomstPagina() {
   return (
     <div className="space-y-6">
+      <CadushyTourBanner />
+
       <div className="relative -mx-4 -mt-4">
         <HeroIllustration />
         <DansendeBeestjes />

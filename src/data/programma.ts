@@ -271,17 +271,17 @@ const ruwProgramma: Dagprogramma[] = [
         status: "optie",
       },
       {
-        id: "ostracod-night",
-        titel: "Ostracod Night — Nachtsnorkelen",
+        id: "foodtruck-cadushy-ostracods",
+        titel: "Foodtruck tour, Cadushy & Ostracods",
         datum: "2026-09-29",
-        tijd: "18:30",
+        tijd: "14:30",
+        eindtijd: "±20:30",
+        locatie: "Vertrek: Punt Vierkant",
         omschrijving:
-          "Nachtsnorkeltocht om de bioluminescente lichtshow van ostracoden te zien: piepkleine schaaldiertjes die 's nachts korte lichtsignalen afgeven om een partner aan te trekken, boven ondiepe, structuurrijke riffen. Om 18:30 aanwezig zijn, de lichtshow begint zelf rond 19:09 zodra het donker genoeg is.",
-        praktisch:
-          "Neem een lamp mee, maar gebruik 'm bewust: alleen voor een veilige in- en uitstap en oriëntatie, en volgens de afspraken met de gids uit tijdens het kijken. Kijk naar kleine lichtpuntjes en korte lichtsnoertjes boven het rif — dat is iets anders dan opflitsend plankton, dus niet gaan zwaaien of het water opwoelen. Geef je ogen rust: geen telefoon, camera of felle lamp — het went, en de zwakke flitsjes worden beter zichtbaar naarmate je ogen aan het donker wennen.",
-        infoUrl: "/ostracod-night",
-        infoLabel: "Uitleg, visualisatie en tips bekijken",
-        fotoEmoji: "✨",
+          "Een middag langs Pita Madre, Yhanni's Arepas, The Cadushy Distillery in Rincon en Stoked Foodtruck, met als hoogtepunt de bioluminescente ostracods om 19:00 in het water. Afsluiten met Dominican Urban Food Truck. Vertrek (14:30) en het moment in het water (19:00) zijn vast; de tijden ertussen zijn indicatief.",
+        infoUrl: "/foodtruck-cadushy-ostracods",
+        infoLabel: "Volledig schema en info bekijken",
+        fotoEmoji: "🌮",
         status: "bevestigd",
       },
       {
