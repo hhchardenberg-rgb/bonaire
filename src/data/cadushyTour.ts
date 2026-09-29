@@ -1,3 +1,5 @@
+import { mapsRouteUrl } from "@/lib/maps";
+
 export const cadushyTourDatum = "2026-09-29";
 
 export interface CadushySchemaItem {
@@ -139,6 +141,18 @@ export const cadushyRoute = [
   "Ostracodlocatie — 19:00 in het water",
   "Dominican Urban — Kaya Gilberto F. Croes",
 ];
+
+// Volgorde voor de Google Maps-routelink. De ostracod-instapplek staat er
+// bewust niet bij: die locatie ligt niet vast en wordt ter plekke met de
+// gids/duikoperator bepaald.
+export const cadushyMapsRouteUrl = mapsRouteUrl([
+  "Punt Vierkant Bonaire",
+  "Pita Madre Kaya Gobernador N. Debrot Kralendijk",
+  "Budget Marine Kaya Neerlandia Kralendijk Bonaire",
+  "The Cadushy Distillery Rincon Bonaire",
+  "Stoked Foodtruck Te Amo Beach Bonaire",
+  "Carwash Bonaire Kaya Gilberto F. Croes Kralendijk",
+]);
 
 export const cadushyVoorbereiding =
   "Neem zwem-/duikspullen al mee in de auto, zodat je na Rincon en Stoked geen materiaal meer hoeft te verzamelen. Neem daarnaast handdoeken, droge kleding, water, verlichting voor de avond en eventueel een waterdichte tas mee.";

@@ -2,12 +2,14 @@ import Link from "next/link";
 import { BackLink } from "@/components/BackLink";
 import { PageHeader } from "@/components/PageHeader";
 import { OstracodDiagram } from "@/components/OstracodDiagram";
+import { CadushyRouteKaart } from "@/components/CadushyRouteKaart";
 import { mapsUrl } from "@/lib/maps";
 import {
   cadushyTourSchema,
   cadushyStops,
   cadushyOstracodPlanning,
   cadushyRoute,
+  cadushyMapsRouteUrl,
   cadushyVoorbereiding,
   cadushyDeelTip,
   cadushyIndicatiefNotitie,
@@ -46,6 +48,14 @@ export default function CadushyTourPagina() {
             </li>
           ))}
         </ol>
+        <a
+          href={cadushyMapsRouteUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="focus-ring mt-3 inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-xs font-semibold text-diepblauw-800 shadow-card transition hover:-translate-y-0.5"
+        >
+          📍 Open hele route in Google Maps
+        </a>
       </div>
 
       {cadushyStops.slice(0, 4).map((stop, i) => (
@@ -199,6 +209,18 @@ export default function CadushyTourPagina() {
             noordwaarts naar Rincon, en daarna weer terug naar het zuiden voor Stoked en de
             ostracods. Na het water rijd je terug richting Kralendijk voor Dominican Urban.
           </p>
+          <a
+            href={cadushyMapsRouteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring mt-3 inline-flex items-center gap-1.5 rounded-full bg-turquoise-50 px-3.5 py-2 text-xs font-semibold text-turquoise-800"
+          >
+            📍 Open hele route in Google Maps
+          </a>
+        </div>
+
+        <div className="mt-3">
+          <CadushyRouteKaart />
         </div>
       </div>
 

@@ -21,12 +21,12 @@ const snelknoppen = [
 export default function WelkomstPagina() {
   return (
     <div className="space-y-6">
-      <CadushyTourBanner />
-
       <div className="relative -mx-4 -mt-4">
         <HeroIllustration />
         <DansendeBeestjes />
       </div>
+
+      <CadushyTourBanner />
 
       <div className="text-center">
         <h1 className="font-display text-3xl font-bold text-diepblauw-800">{trip.titel}</h1>
